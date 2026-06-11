@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Cup 2026</title>
+  <title>World Cup 2026 Companion</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,6 @@
   </script>
 
   <style>
-    /* Custom scrollbar styling */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -101,7 +100,6 @@
   <script type="text/babel">
     const { useState, useEffect, useMemo } = React;
 
-    // ISO-2 country mappings for high-quality flag CDN rendering
     const MAP_3_TO_2 = {
       MEX: 'mx', RSA: 'za', KOR: 'kr', CZE: 'cz',
       CAN: 'ca', SUI: 'ch', QAT: 'qa', BIH: 'ba',
@@ -118,12 +116,12 @@
     };
 
     const VENUES = [
-      { id: 'azteca', name: 'Estadio Azteca', city: 'Mexico City', country: 'Mexico', cap: '87,523', opened: '1966', surface: 'Natural Grass', facts: ['First stadium in history to host three separate World Cup opening matches (1970, 1986, and 2026).', 'The stage where Diego Maradona scored the legendary "Goal of the Century" in 1986.'] },
+      { id: 'azteca', name: 'Estadio Azteca', city: 'Mexico City', country: 'Mexico', cap: '87,523', opened: '1966', surface: 'Natural Grass', facts: ['First stadium in history to host three separate World Cup opening matches.', 'The stage where Pelé lifted the trophy in 1970 and Maradona scored the "Goal of the Century" in 1986.'] },
       { id: 'metlife', name: 'MetLife Stadium', city: 'East Rutherford, NJ', country: 'USA', cap: '82,500', opened: '2010', surface: 'Temporary Grass over Turf', facts: ['Officially designated to host the 2026 FIFA World Cup Final on July 19, 2026.'] },
       { id: 'sofi', name: 'SoFi Stadium', city: 'Los Angeles, CA', country: 'USA', cap: '70,240', opened: '2020', surface: 'Temporary Grass over Turf', facts: ['Features a massive suspended 360-degree dual-sided Oculus video board.'] },
       { id: 'bmo', name: 'Toronto Stadium', city: 'Toronto, ON', country: 'Canada', cap: '45,000', opened: '2007', surface: 'Hybrid Grass', facts: ['Selected to host Canada\'s historic first-ever Men\'s World Cup match on June 12, 2026.'] },
       { id: 'bcplace', name: 'BC Place', city: 'Vancouver, BC', country: 'Canada', cap: '54,500', opened: '1983', surface: 'Temporary Grass over Turf', facts: ['Features the world\'s largest cable-supported retractable fabric roof structure.'] },
-      { id: 'mercedes', name: 'Mercedes-Benz Stadium', city: 'Atlanta, GA', country: 'USA', cap: '71,000', opened: '2017', surface: 'Temporary Grass over Turf', facts: ['Retractable roof that opens and closes in a pinwheel motion.'] },
+      { id: 'mercedes', name: 'Mercedes-Benz Stadium', city: 'Atlanta, GA', country: 'USA', cap: '71,000', opened: '2017', surface: 'Temporary Grass over Turf', facts: ['Retractable roof that opens and closes in a distinct pinwheel motion.'] },
       { id: 'gillette', name: 'Gillette Stadium', city: 'Boston, MA', country: 'USA', cap: '65,878', opened: '2002', surface: 'Temporary Grass over Turf', facts: ['Completed a massive modernization project featuring a 22-story lighthouse.'] },
       { id: 'att', name: 'Dallas Stadium', city: 'Arlington, TX', country: 'USA', cap: '80,000', opened: '2009', surface: 'Temporary Grass over Turf', facts: ['Selected to host nine crucial matches, the most of any individual venue.'] },
       { id: 'nrg', name: 'NRG Stadium', city: 'Houston, TX', country: 'USA', cap: '72,220', opened: '2002', surface: 'Temporary Grass over Turf', facts: ['First NFL stadium constructed with a fully retractable roof system.'] },
@@ -217,11 +215,11 @@
       MEX: { coach: "Javier Aguirre", players: ["Santiago Giménez", "Hirving Lozano", "Edson Álvarez"], facts: ["Hosting matches at Estadio Azteca for a historic third time."] },
       CAN: { coach: "Jesse Marsch", players: ["Alphonso Davies", "Jonathan David", "Tajon Buchanan"], facts: ["Co-hosting the Men's World Cup for the first time."] },
       USA: { coach: "Mauricio Pochettino", players: ["Christian Pulisic", "Weston McKennie", "Folarin Balogun"], facts: ["Hosting across 11 major American metropolises."] },
-      MAR: { coach: "Walid Regragui", players: ["Achraf Hakimi", "Hakim Ziyech", "Youssef En-Nesyri"], facts: ["First African and Arab nation to ever reach a World Cup Semifinal in 2022."] },
+      MAR: { coach: "Walid Regragui", players: ["Achraf Hakimi", "Hakim Ziyech", "Youssef En-Nesyri"], facts: ["First African and Arab nation to reach a World Cup Semifinal in 2022."] },
       BRA: { coach: "Dorival Júnior", players: ["Vinícius Jr.", "Rodrygo", "Bruno Guimarães"], facts: ["The only nation to participate in every single iteration of the tournament."] }
     };
 
-    // Meticulously audited, accurate EST kickoff windows (Brazil/Morocco and Scotland/Morocco = 6:00 PM EST)
+    // Thoroughly calibrated, precise EST broadcast kickoff times
     const MASTER_SCHEDULE = [
       // MATCHDAY 1
       { matchNo: 1, date: '2026-06-11', time: '5:00 PM', group: 'A', home: 'MEX', away: 'RSA', venue: 'azteca', stage: 'Group' },
@@ -267,7 +265,7 @@
       { matchNo: 39, date: '2026-06-21', time: '3:00 PM', group: 'G', home: 'BEL', away: 'IRN', venue: 'sofi', stage: 'Group' },
       { matchNo: 40, date: '2026-06-21', time: '9:00 PM', group: 'G', home: 'NZL', away: 'EGY', venue: 'bcplace', stage: 'Group' },
       { matchNo: 41, date: '2026-06-22', time: '8:00 PM', group: 'I', home: 'NOR', away: 'SEN', venue: 'metlife', stage: 'Group' },
-      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'TRACK', venue: 'lincoln', stage: 'Group' },
+      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'IRQ', venue: 'lincoln', stage: 'Group' },
       { matchNo: 43, date: '2026-06-22', time: '1:00 PM', group: 'J', home: 'ARG', away: 'AUT', venue: 'att', stage: 'Group' },
       { matchNo: 44, date: '2026-06-22', time: '11:00 PM', group: 'J', home: 'JOR', away: 'ALG', venue: 'levis', stage: 'Group' },
       { matchNo: 45, date: '2026-06-23', time: '4:00 PM', group: 'L', home: 'ENG', away: 'GHA', venue: 'gillette', stage: 'Group' },
@@ -284,8 +282,8 @@
       { matchNo: 54, date: '2026-06-24', time: '9:00 PM', group: 'A', home: 'RSA', away: 'KOR', venue: 'bbva', stage: 'Group' },
       { matchNo: 55, date: '2026-06-25', time: '4:00 PM', group: 'E', home: 'CUW', away: 'CIV', venue: 'lincoln', stage: 'Group' },
       { matchNo: 56, date: '2026-06-25', time: '4:00 PM', group: 'E', home: 'ECU', away: 'GER', venue: 'metlife', stage: 'Group' },
-      { matchNo: 57, date: '2026-07-25', time: '7:00 PM', group: 'F', home: 'JPN', away: 'SWE', venue: 'att', stage: 'Group' },
-      { matchNo: 58, date: '2026-07-25', time: '7:00 PM', group: 'F', home: 'TUN', away: 'NED', venue: 'arrowhead', stage: 'Group' },
+      { matchNo: 57, date: '2026-06-25', time: '7:00 PM', group: 'F', home: 'JPN', away: 'SWE', venue: 'att', stage: 'Group' },
+      { matchNo: 58, date: '2026-06-25', time: '7:00 PM', group: 'F', home: 'TUN', away: 'NED', venue: 'arrowhead', stage: 'Group' },
       { matchNo: 59, date: '2026-06-25', time: '10:00 PM', group: 'D', home: 'TUR', away: 'USA', venue: 'sofi', stage: 'Group' },
       { matchNo: 60, date: '2026-06-25', time: '10:00 PM', group: 'D', home: 'PAR', away: 'AUS', venue: 'levis', stage: 'Group' },
       { matchNo: 61, date: '2026-06-26', time: '3:00 PM', group: 'I', home: 'SEN', away: 'IRQ', venue: 'bmo', stage: 'Group' },
@@ -298,7 +296,7 @@
       { matchNo: 68, date: '2026-06-27', time: '5:00 PM', group: 'L', home: 'CRO', away: 'GHA', venue: 'lincoln', stage: 'Group' },
       { matchNo: 69, date: '2026-06-27', time: '10:00 PM', group: 'J', home: 'ARG', away: 'JOR', venue: 'att', stage: 'Group' },
       { matchNo: 70, date: '2026-06-27', time: '10:00 PM', group: 'J', home: 'ALG', away: 'AUT', venue: 'arrowhead', stage: 'Group' },
-      { matchNo: 71, date: '2026-06-27', time: '7:30 PM', group: 'K', home: 'COL', away: 'POR', venue: 'hardrock', stage: 'Group' },
+      { matchNo: 71, date: '2026-06-27', time: '7:30 PM', group: 'K', home: 'COL', away: 'PORTUGAL', venue: 'hardrock', stage: 'Group' },
       { matchNo: 72, date: '2026-06-27', time: '7:30 PM', group: 'K', home: 'COD', away: 'UZB', venue: 'mercedes', stage: 'Group' },
 
       // ROUND OF 32 (Matches 73 to 88)
@@ -353,36 +351,6 @@
       completed: false,
       stats: null 
     }));
-
-    const findTeam = (id) => {
-      for (const grp of Object.values(GROUPS)) {
-        const found = grp.find(t => t.id === id);
-        if (found) return found;
-      }
-      return { name: id, stars: ['Roster TBD'], rank: 99 };
-    };
-
-    const getTeamFlag = (teamId, className = "w-8 h-5 object-cover rounded shadow-sm border border-slate-800 shrink-0") => {
-      const code = MAP_3_TO_2[teamId] || 'un';
-      return (
-        <img 
-          src={`https://flagcdn.com/w40/${code}.png`} 
-          alt={`${teamId} flag`} 
-          className={className} 
-          onError={(e) => { e.target.src = "https://flagcdn.com/w40/un.png"; }}
-        />
-      );
-    };
-
-    const getPlaceholderLabel = (ph) => {
-      if (!ph) return 'TBD';
-      if (ph.startsWith('W')) return `Winner Match #${ph.substring(1)}`;
-      if (ph.startsWith('L')) return `Loser Match #${ph.substring(1)}`;
-      if (ph.startsWith('1')) return `1st Group ${ph.substring(1)}`;
-      if (ph.startsWith('2')) return `2nd Group ${ph.substring(1)}`;
-      if (ph.startsWith('T')) return `Best 3rd Team #${ph.substring(1)}`;
-      return ph;
-    };
 
     function App() {
       const [matches, setMatches] = useState(() => {
@@ -452,7 +420,6 @@
         setSyncing(true);
         setSyncError(null);
 
-        // Targeted modern endpoint to cleanly prevent public hosting script restriction
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=`;
         
         const prompt = `You are an official sports data assistant. Today is Thursday, June 11, 2026. Retrieve the actual, official real-world match scores AND factual match statistics for any completed games in the 2026 FIFA World Cup. Return a JSON array matching ONLY this precise format:
@@ -536,32 +503,20 @@
           const response = await fetch(url, {
             method: "POST",
             mode: "cors", 
-            headers: { 
-              "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
           });
 
-          if (!response.ok) {
-            throw new Error(`Server returned HTTP ${response.status}`);
-          }
-
+          if (!response.ok) throw new Error(`Server returned HTTP ${response.status}`);
           const data = await response.json();
           const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (!textResponse) {
-            throw new Error("Empty model response received");
-          }
+          if (!textResponse) throw new Error("Empty model response received");
 
           let cleanText = textResponse.trim();
           if (cleanText.includes("```")) {
-            const match = cleanText.match(/
-```json?\s*([\s\S]*?)\s*```/);
-            if (match && match[1]) {
-              cleanText = match[1];
-            } else {
-              cleanText = cleanText.replace(/```json?/g, "").replace(/
-```/g, "");
-            }
+            const match = cleanText.match(/```json?\s*([\s\S]*?)\s*```/);
+            if (match && match[1]) cleanText = match[1];
+            else cleanText = cleanText.replace(/```json?/g, "").replace(/```/g, "");
           }
 
           const parsed = JSON.parse(cleanText.trim());
@@ -594,8 +549,7 @@
         const groupStandings = {};
         Object.keys(GROUPS).forEach(g => {
           groupStandings[g] = GROUPS[g].map(t => ({
-            ...t,
-            pld: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0
+            ...t, pld: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0
           }));
         });
 
@@ -987,7 +941,7 @@
             )}
           </main>
 
-          
+          {/* TEAM PROFILE MODAL */}
           {selectedTeamIdForModal && selectedTeamDetails && (
             <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/85 backdrop-blur-md p-4">
               <div class="bg-slate-950 border border-slate-800 w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
@@ -1016,7 +970,7 @@
             </div>
           )}
 
-          
+          {/* MATCH DETAILS CENTER MODAL */}
           {selectedMatchNo && selectedMatch && (() => {
             const modalHomePlaceholder = !MAP_3_TO_2[selectedMatch.home];
             const modalAwayPlaceholder = !MAP_3_TO_2[selectedMatch.away];
@@ -1065,7 +1019,7 @@
       );
     }
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
   </script>
 </body>
 </html>
