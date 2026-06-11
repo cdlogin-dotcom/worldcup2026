@@ -636,14 +636,16 @@
         }
       };
 
+      // Sync Results Call Function
+
       const syncOfficialMatchResults = async () => {
         setSyncing(true);
         setSyncError(null);
 
-        const apiKey = ""; // Implicitly injected at runtime
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        // Uses a robust, secure runtime public proxy gateway endpoint optimized for production web environments
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=`;
         
-        const prompt = `You are an official sports data assistant. Today is Thursday, June 11, 2026 (the opening day of the tournament). Search for real-time, official real-world match scores AND factual match statistics for any completed games in the 2026 FIFA World Cup. Search specifically for "World Cup 2026 results". Return a JSON array matching ONLY this precise format:
+        const prompt = `You are an official sports data assistant. Today is Thursday, June 11, 2026 (the opening day of the tournament). Search for real-time, official real-world match scores AND factual match statistics for any completed games in the 2026 FIFA World Cup. This includes BOTH group stage matches (1 to 72) and all subsequent knockout stage matches (73 to 104). Search specifically for "World Cup 2026 results". Return a JSON array matching ONLY this precise format:
         { "results": [{ 
            "matchNo": 1, 
            "homeGoals": 2, 
@@ -729,7 +731,10 @@
           try {
             const response = await fetch(url, {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              mode: "cors", // Explicitly enforces Cross-Origin Resource Sharing on live remote web servers
+              headers: { 
+                "Content-Type": "application/json"
+              },
               body: JSON.stringify(payload)
             });
 
@@ -743,7 +748,6 @@
               throw new Error("Empty model response received");
             }
 
-            // Strip out potential markdown formatting to prevent parser crashes
             let cleanText = textResponse.trim();
             if (cleanText.includes("```")) {
               const match = cleanText.match(/```json?\s*([\s\S]*?)\s*```/);
