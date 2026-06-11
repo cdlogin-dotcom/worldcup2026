@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Cup 2026 Companion</title>
   
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   
+  <!-- React & Babel CDNs -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
@@ -93,6 +96,7 @@
 
   <div id="root"></div>
 
+  <!-- React Code Component -->
   <script type="text/babel">
     const { useState, useEffect, useMemo } = React;
 
@@ -208,7 +212,7 @@
     const allTeamsSorted = Object.keys(GROUPS).flatMap(g => GROUPS[g]).sort((a, b) => a.name.localeCompare(b.name));
 
     const TEAM_DETAILS = {
-      MEX: { coach: "Javier Aguirre", players: ["Santiago Giménez", "Hirving Lozano", "Edson Álvarez"], facts: ["Estadio Azteca hosts an opening match for a record third tournament."] },
+      MEX: { coach: "Javier Aguirre", players: ["Santiago Giménez", "Hirving Lozano", "Edson Álvarez"], facts: ["Hosting matches at Estadio Azteca for a historic third time."] },
       CAN: { coach: "Jesse Marsch", players: ["Alphonso Davies", "Jonathan David", "Tajon Buchanan"], facts: ["First time Canada co-hosts a FIFA Men's World Cup."] },
       USA: { coach: "Mauricio Pochettino", players: ["Christian Pulisic", "Weston McKennie", "Folarin Balogun"], facts: ["Matches hosted across 11 key states."] },
       MAR: { coach: "Walid Regragui", players: ["Achraf Hakimi", "Hakim Ziyech", "Youssef En-Nesyri"], facts: ["First African nation to compete in a World Cup Semifinal in 2022."] },
@@ -260,7 +264,7 @@
       { matchNo: 39, date: '2026-06-21', time: '3:00 PM', group: 'G', home: 'BEL', away: 'IRN', venue: 'sofi', stage: 'Group' },
       { matchNo: 40, date: '2026-06-21', time: '9:00 PM', group: 'G', home: 'NZL', away: 'EGY', venue: 'bcplace', stage: 'Group' },
       { matchNo: 41, date: '2026-06-22', time: '8:00 PM', group: 'I', home: 'NOR', away: 'SEN', venue: 'metlife', stage: 'Group' },
-      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'IRQ', venue: 'lincoln', stage: 'Group' },
+      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'NOR', venue: 'lincoln', stage: 'Group' },
       { matchNo: 43, date: '2026-06-22', time: '1:00 PM', group: 'J', home: 'ARG', away: 'AUT', venue: 'att', stage: 'Group' },
       { matchNo: 44, date: '2026-06-22', time: '11:00 PM', group: 'J', home: 'JOR', away: 'ALG', venue: 'levis', stage: 'Group' },
       { matchNo: 45, date: '2026-06-23', time: '4:00 PM', group: 'L', home: 'ENG', away: 'GHA', venue: 'gillette', stage: 'Group' },
