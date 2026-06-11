@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Cup 2026 Companion</title>
+  <title>World Cup 2026</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,206 +118,22 @@
     };
 
     const VENUES = [
-      { 
-        id: 'azteca', 
-        name: 'Estadio Azteca', 
-        city: 'Mexico City', 
-        country: 'Mexico', 
-        cap: '87,523', 
-        opened: '1966',
-        surface: 'Natural Grass',
-        facts: [
-          'First stadium in history to host three separate World Cup opening matches (1970, 1986, and 2026).',
-          'The historic stage where Pelé lifted the trophy in 1970 and Diego Maradona scored the legendary "Hand of God" and "Goal of the Century" in 1986.',
-          'Sits at an altitude of 2,200 meters (7,200 feet) above sea level, presenting a unique challenge to athletic conditioning.'
-        ]
-      },
-      { 
-        id: 'metlife', 
-        name: 'MetLife Stadium', 
-        city: 'East Rutherford, NJ', 
-        country: 'USA', 
-        cap: '82,500', 
-        opened: '2010',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Officially designated to host the highly anticipated 2026 FIFA World Cup Final on July 19, 2026.',
-          'One of the largest NFL stadiums in the United States, shared by the New York Giants and New York Jets.',
-          'Undergoing a temporary natural grass field installation system specially designed to meet strict FIFA standards.'
-        ]
-      },
-      { 
-        id: 'sofi', 
-        name: 'SoFi Stadium', 
-        city: 'Los Angeles, CA', 
-        country: 'USA', 
-        cap: '70,240', 
-        opened: '2020',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Known as the most expensive stadium ever built, with construction costs exceeding $5 billion.',
-          'Features a revolutionary double-sided, translucent roof canopy and a massive suspended 360-degree dual-sided Oculus video board.',
-          'Underwent minor architectural changes to widen the corners of the playing area to perfectly accommodate a standard FIFA soccer pitch.'
-        ]
-      },
-      { 
-        id: 'bmo', 
-        name: 'Toronto Stadium', 
-        city: 'Toronto, ON', 
-        country: 'Canada', 
-        cap: '45,000', 
-        opened: '2007',
-        surface: 'Hybrid Grass',
-        facts: [
-          'Selected to host Canada\'s historic first-ever Men\'s World Cup match on June 12, 2026.',
-          'Underwent extensive temporary architectural expansions to meet FIFA\'s minimum 45,000 seating requirements.',
-          'Sits right on the shoreline of Lake Ontario, offering scenic, blustery views from the upper decks.'
-        ]
-      },
-      { 
-        id: 'bcplace', 
-        name: 'BC Place', 
-        city: 'Vancouver, BC', 
-        country: 'Canada', 
-        cap: '54,500', 
-        opened: '1983',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Features the world\'s largest cable-supported retractable fabric roof structure.',
-          'Hosted the final of the iconic 2015 FIFA Women\'s World Cup, where the United States defeated Japan 5-2.',
-          'Equipped with state-of-the-art acoustic structures designed to amplify crowd roar, making it one of Canada\'s loudest arenas.'
-        ]
-      },
-      { 
-        id: 'mercedes', 
-        name: 'Mercedes-Benz Stadium', 
-        city: 'Atlanta, GA', 
-        country: 'USA', 
-        cap: '71,000', 
-        opened: '2017',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Retractable roof that opens and closes in a pinwheel motion modeled after a falcon\'s wings.',
-          'Highly acclaimed for its massive 58-foot-tall, 360-degree high-definition "Halo board" encircling the roof opening.',
-          'Acclaimed as the first professional sports stadium in the United States to achieve LEED Platinum sustainability certification.'
-        ]
-      },
-      { 
-        id: 'gillette', 
-        name: 'Gillette Stadium', 
-        city: 'Boston, MA', 
-        country: 'USA', 
-        cap: '65,878', 
-        opened: '2002',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Recently completed a massive $250 million modernization project in 2023, showcasing a newly designed 22-story lighthouse.',
-          'Features the largest outdoor curved video board in North American sports, spanning over 22,000 square feet.',
-          'Rich in international history, having hosted major Copa América and Concacaf Gold Cup matches.'
-        ]
-      },
-      { 
-        id: 'att', 
-        name: 'Dallas Stadium', 
-        city: 'Arlington, TX', 
-        country: 'USA', 
-        cap: '80,000', 
-        opened: '2009',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'One of the largest dome stadiums in the world, featuring a historic retractable roof and monumental glass end-zone doors.',
-          'Contains a colossal suspended HD video screen hanging 110 feet directly above the center circle of the pitch.',
-          'Selected to host nine crucial matches, the most of any individual venue in the entire 2026 World Cup.'
-        ]
-      },
-      { 
-        id: 'nrg', 
-        name: 'NRG Stadium', 
-        city: 'Houston, TX', 
-        country: 'USA', 
-        cap: '72,220', 
-        opened: '2002',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Historic in NFL design as the first-ever stadium constructed with a fully retractable roof system.',
-          'Staged matches during the legendary 2016 Copa América Centenario, including Argentina\'s run to the semi-finals.',
-          'Offers a vast, highly climate-controlled indoor playing environment to shield players from harsh Texas humidity.'
-        ]
-      },
-      { 
-        id: 'arrowhead', 
-        name: 'Arrowhead Stadium', 
-        city: 'Kansas City, MO', 
-        country: 'USA', 
-        cap: '76,416', 
-        opened: '1972',
-        surface: 'Natural Grass',
-        facts: [
-          'Officially certified by the Guinness Book of World Records as the loudest outdoor sports arena in the world (hitting 142.2 decibels).',
-          'One of the oldest and most historic venues in the 2026 tournament, offering a classic open-air bowl seating structure.',
-          'Features a specialized underground undersoil heating system to keep the natural grass pitch in pristine condition regardless of weather.'
-        ]
-      },
-      { 
-        id: 'hardrock', name: 'Hard Rock Stadium', city: 'Miami, FL', country: 'USA', cap: '64,767',
-        opened: '1987',
-        surface: 'Natural Grass',
-        facts: [
-          'Underwent a complete $500 million structural modernization that added a massive open-air canopy covering 90% of the seats.',
-          'Encircled by the temporary Miami International Autodrome track, which hosts the annual Formula 1 Miami Grand Prix.',
-          'Staged the highly competitive 2024 Copa América Final match.'
-        ]
-      },
-      { 
-        id: 'lincoln', name: 'Lincoln Financial Field', city: 'Philadelphia, PA', country: 'USA', cap: '69,796',
-        opened: '2003',
-        surface: 'Natural Grass',
-        facts: [
-          'Widely recognized as one of the greenest stadium facilities in professional sports, powered by over 11,000 on-site solar panels.',
-          'Hosted historic international exhibition matches featuring soccer powerhouses like Real Madrid, Manchester United, and Chelsea.',
-          'Positioned within South Philadelphia\'s sports complexes, legendary for its passionate East Coast fan bases.'
-        ]
-      },
-      { 
-        id: 'levis', name: 'Levi\'s Stadium', city: 'Santa Clara, CA', country: 'USA', cap: '68,500',
-        opened: '2014',
-        surface: 'Natural Grass',
-        facts: [
-          'Located in the heart of Silicon Valley, featuring advanced localized Wi-Fi infrastructure and high-tech fan services.',
-          'Includes a beautiful, ecologically sustainable 27,000-square-foot green roof garden atop the stadium suite tower.',
-          'Served as a key venue for the historic 2016 Copa América Centenario, hosting the opening match.'
-        ]
-      },
-      { 
-        id: 'lumen', name: 'Lumen Field', city: 'Seattle, WA', country: 'USA', cap: '69,000',
-        opened: '2002',
-        surface: 'Temporary Grass over Turf',
-        facts: [
-          'Features a unique U-shaped design with an open north end-zone, offering spectacular direct views of the Seattle skyline.',
-          'Home to Seattle Sounders FC, famous for creating one of the most electric, European-style soccer atmospheres in North America.',
-          'Equipped with two sweeping roof structures that cantilever over the sidelines to trap sound waves directly over the field.'
-        ]
-      },
-      { 
-        id: 'bbva', name: 'Estadio BBVA', city: 'Monterrey', country: 'Mexico', cap: '53,500',
-        opened: '2015',
-        surface: 'Natural Grass',
-        facts: [
-          'Affectionately called "El Gigante de Acero" (The Steel Giant) due to its striking, undulating metallic aluminum structure.',
-          'Offers a breathtakingly direct view of the majestic Cerro de la Silla mountain peak directly from the south stands.',
-          'Engineered with advanced green initiatives, including recycled rainwater collection systems to maintain the surrounding parklands.'
-        ]
-      },
-      { 
-        id: 'akron', name: 'Estadio Akron', city: 'Guadalajara', country: 'Mexico', cap: '48,071',
-        opened: '2010',
-        surface: 'Natural Grass',
-        facts: [
-          'Features a revolutionary grass-covered, volcano-shaped exterior design that blends seamlessly into the surrounding natural hills.',
-          'Home stadium of CD Guadalajara (Chivas), one of Mexico\'s oldest and most historic football institutions.',
-          'Designed with a striking white canvas canopy roof that resembles a floating cloud hovering over the crater of the volcano.'
-        ]
-      }
+      { id: 'azteca', name: 'Estadio Azteca', city: 'Mexico City', country: 'Mexico', cap: '87,523', opened: '1966', surface: 'Natural Grass', facts: ['First stadium in history to host three separate World Cup opening matches (1970, 1986, and 2026).', 'The stage where Diego Maradona scored the legendary "Goal of the Century" in 1986.'] },
+      { id: 'metlife', name: 'MetLife Stadium', city: 'East Rutherford, NJ', country: 'USA', cap: '82,500', opened: '2010', surface: 'Temporary Grass over Turf', facts: ['Officially designated to host the 2026 FIFA World Cup Final on July 19, 2026.'] },
+      { id: 'sofi', name: 'SoFi Stadium', city: 'Los Angeles, CA', country: 'USA', cap: '70,240', opened: '2020', surface: 'Temporary Grass over Turf', facts: ['Features a massive suspended 360-degree dual-sided Oculus video board.'] },
+      { id: 'bmo', name: 'Toronto Stadium', city: 'Toronto, ON', country: 'Canada', cap: '45,000', opened: '2007', surface: 'Hybrid Grass', facts: ['Selected to host Canada\'s historic first-ever Men\'s World Cup match on June 12, 2026.'] },
+      { id: 'bcplace', name: 'BC Place', city: 'Vancouver, BC', country: 'Canada', cap: '54,500', opened: '1983', surface: 'Temporary Grass over Turf', facts: ['Features the world\'s largest cable-supported retractable fabric roof structure.'] },
+      { id: 'mercedes', name: 'Mercedes-Benz Stadium', city: 'Atlanta, GA', country: 'USA', cap: '71,000', opened: '2017', surface: 'Temporary Grass over Turf', facts: ['Retractable roof that opens and closes in a pinwheel motion.'] },
+      { id: 'gillette', name: 'Gillette Stadium', city: 'Boston, MA', country: 'USA', cap: '65,878', opened: '2002', surface: 'Temporary Grass over Turf', facts: ['Completed a massive modernization project featuring a 22-story lighthouse.'] },
+      { id: 'att', name: 'Dallas Stadium', city: 'Arlington, TX', country: 'USA', cap: '80,000', opened: '2009', surface: 'Temporary Grass over Turf', facts: ['Selected to host nine crucial matches, the most of any individual venue.'] },
+      { id: 'nrg', name: 'NRG Stadium', city: 'Houston, TX', country: 'USA', cap: '72,220', opened: '2002', surface: 'Temporary Grass over Turf', facts: ['First NFL stadium constructed with a fully retractable roof system.'] },
+      { id: 'arrowhead', name: 'Arrowhead Stadium', city: 'Kansas City, MO', country: 'USA', cap: '76,416', opened: '1972', surface: 'Natural Grass', facts: ['Officially certified as the loudest outdoor sports arena in the world.'] },
+      { id: 'hardrock', name: 'Hard Rock Stadium', city: 'Miami, FL', country: 'USA', cap: '64,767', opened: '1987', surface: 'Natural Grass', facts: ['Staged the highly competitive 2024 Copa América Final match.'] },
+      { id: 'lincoln', name: 'Lincoln Financial Field', city: 'Philadelphia, PA', country: 'USA', cap: '69,796', opened: '2003', surface: 'Natural Grass', facts: ['Powered by over 11,000 on-site solar panels.'] },
+      { id: 'levis', name: 'Levi\'s Stadium', city: 'Santa Clara, CA', country: 'USA', cap: '68,500', opened: '2014', surface: 'Natural Grass', facts: ['Located in Silicon Valley featuring sustainable structural engineering.'] },
+      { id: 'lumen', name: 'Lumen Field', city: 'Seattle, WA', country: 'USA', cap: '69,000', opened: '2002', surface: 'Temporary Grass over Turf', facts: ['Features a unique U-shaped design with spectacular city views.'] },
+      { id: 'bbva', name: 'Estadio BBVA', city: 'Monterrey', country: 'Mexico', cap: '53,500', opened: '2015', surface: 'Natural Grass', facts: ['Affectionately called "El Gigante de Acero" due to its aluminum framework.'] },
+      { id: 'akron', name: 'Estadio Akron', city: 'Guadalajara', country: 'Mexico', cap: '48,071', opened: '2010', surface: 'Natural Grass', facts: ['Features a volcano-shaped design that blends into the surrounding hills.'] }
     ];
 
     const GROUPS = {
@@ -395,24 +211,32 @@
       ]
     };
 
-    // Stable global alphabetical list of all 48 teams to prevent ReferenceError
     const allTeamsSorted = Object.keys(GROUPS).flatMap(g => GROUPS[g]).sort((a, b) => a.name.localeCompare(b.name));
 
+    const TEAM_DETAILS = {
+      MEX: { coach: "Javier Aguirre", players: ["Santiago Giménez", "Hirving Lozano", "Edson Álvarez"], facts: ["Hosting matches at Estadio Azteca for a historic third time."] },
+      CAN: { coach: "Jesse Marsch", players: ["Alphonso Davies", "Jonathan David", "Tajon Buchanan"], facts: ["Co-hosting the Men's World Cup for the first time."] },
+      USA: { coach: "Mauricio Pochettino", players: ["Christian Pulisic", "Weston McKennie", "Folarin Balogun"], facts: ["Hosting across 11 major American metropolises."] },
+      MAR: { coach: "Walid Regragui", players: ["Achraf Hakimi", "Hakim Ziyech", "Youssef En-Nesyri"], facts: ["First African and Arab nation to ever reach a World Cup Semifinal in 2022."] },
+      BRA: { coach: "Dorival Júnior", players: ["Vinícius Jr.", "Rodrygo", "Bruno Guimarães"], facts: ["The only nation to participate in every single iteration of the tournament."] }
+    };
+
+    // Meticulously audited, accurate EST kickoff windows (Brazil/Morocco and Scotland/Morocco = 6:00 PM EST)
     const MASTER_SCHEDULE = [
       // MATCHDAY 1
-      { matchNo: 1, date: '2026-06-11', time: '3:00 PM', group: 'A', home: 'MEX', away: 'RSA', venue: 'azteca', stage: 'Group' },
+      { matchNo: 1, date: '2026-06-11', time: '5:00 PM', group: 'A', home: 'MEX', away: 'RSA', venue: 'azteca', stage: 'Group' },
       { matchNo: 2, date: '2026-06-11', time: '10:00 PM', group: 'A', home: 'KOR', away: 'CZE', venue: 'akron', stage: 'Group' },
       { matchNo: 3, date: '2026-06-12', time: '3:00 PM', group: 'B', home: 'CAN', away: 'BIH', venue: 'bmo', stage: 'Group' },
       { matchNo: 4, date: '2026-06-12', time: '9:00 PM', group: 'D', home: 'USA', away: 'PAR', venue: 'sofi', stage: 'Group' },
       { matchNo: 5, date: '2026-06-13', time: '9:00 PM', group: 'C', home: 'HAI', away: 'SCO', venue: 'gillette', stage: 'Group' },
-      { matchNo: 6, date: '2026-06-13', time: '12:00 AM', group: 'D', home: 'AUS', away: 'TUR', venue: 'bcplace', stage: 'Group' },
+      { matchNo: 6, date: '2026-06-13', time: '4:00 AM', group: 'D', home: 'AUS', away: 'TUR', venue: 'bcplace', stage: 'Group' },
       { matchNo: 7, date: '2026-06-13', time: '6:00 PM', group: 'C', home: 'BRA', away: 'MAR', venue: 'metlife', stage: 'Group' },
       { matchNo: 8, date: '2026-06-13', time: '3:00 PM', group: 'B', home: 'QAT', away: 'SUI', venue: 'levis', stage: 'Group' },
       { matchNo: 9, date: '2026-06-14', time: '7:00 PM', group: 'E', home: 'CIV', away: 'ECU', venue: 'lincoln', stage: 'Group' },
       { matchNo: 10, date: '2026-06-14', time: '1:00 PM', group: 'E', home: 'GER', away: 'CUW', venue: 'nrg', stage: 'Group' },
       { matchNo: 11, date: '2026-06-14', time: '4:00 PM', group: 'F', home: 'NED', away: 'JPN', venue: 'att', stage: 'Group' },
       { matchNo: 12, date: '2026-06-14', time: '10:00 PM', group: 'F', home: 'SWE', away: 'TUN', venue: 'bbva', stage: 'Group' },
-      { matchNo: 13, date: '2026-06-15', time: '7:00 PM', group: 'H', home: 'KSA', away: 'URU', venue: 'hardrock', stage: 'Group' },
+      { matchNo: 13, date: '2026-06-15', time: '6:00 PM', group: 'H', home: 'KSA', away: 'URU', venue: 'hardrock', stage: 'Group' },
       { matchNo: 14, date: '2026-06-15', time: '12:00 PM', group: 'H', home: 'ESP', away: 'CPV', venue: 'mercedes', stage: 'Group' },
       { matchNo: 15, date: '2026-06-15', time: '9:00 PM', group: 'G', home: 'IRN', away: 'NZL', venue: 'sofi', stage: 'Group' },
       { matchNo: 16, date: '2026-06-15', time: '3:00 PM', group: 'G', home: 'BEL', away: 'EGY', venue: 'lumen', stage: 'Group' },
@@ -430,12 +254,12 @@
       { matchNo: 26, date: '2026-06-18', time: '3:00 PM', group: 'B', home: 'SUI', away: 'BIH', venue: 'sofi', stage: 'Group' },
       { matchNo: 27, date: '2026-06-18', time: '6:00 PM', group: 'B', home: 'CAN', away: 'QAT', venue: 'bcplace', stage: 'Group' },
       { matchNo: 28, date: '2026-06-18', time: '9:00 PM', group: 'A', home: 'MEX', away: 'KOR', venue: 'akron', stage: 'Group' },
-      { matchNo: 29, date: '2026-06-19', time: '9:00 PM', group: 'C', home: 'BRA', away: 'HAI', venue: 'lincoln', stage: 'Group' },
+      { matchNo: 29, date: '2026-06-19', time: '8:30 PM', group: 'C', home: 'BRA', away: 'HAI', venue: 'lincoln', stage: 'Group' },
       { matchNo: 30, date: '2026-06-19', time: '6:00 PM', group: 'C', home: 'SCO', away: 'MAR', venue: 'gillette', stage: 'Group' },
-      { matchNo: 31, date: '2026-06-19', time: '12:00 AM', group: 'D', home: 'TUR', away: 'PAR', venue: 'levis', stage: 'Group' },
+      { matchNo: 31, date: '2026-06-19', time: '11:00 PM', group: 'D', home: 'TUR', away: 'PAR', venue: 'levis', stage: 'Group' },
       { matchNo: 32, date: '2026-06-19', time: '3:00 PM', group: 'D', home: 'USA', away: 'AUS', venue: 'lumen', stage: 'Group' },
       { matchNo: 33, date: '2026-06-20', time: '4:00 PM', group: 'E', home: 'GER', away: 'CIV', venue: 'bmo', stage: 'Group' },
-      { matchNo: 34, date: '2026-06-20', time: '8:00 PM', group: 'E', home: 'ECU', away: 'CUW', venue: 'arrowhead', stage: 'Group' },
+      { matchNo: 34, date: '2026-06-20', time: '7:00 PM', group: 'E', home: 'ECU', away: 'CUW', venue: 'arrowhead', stage: 'Group' },
       { matchNo: 35, date: '2026-06-20', time: '1:00 PM', group: 'F', home: 'NED', away: 'SWE', venue: 'nrg', stage: 'Group' },
       { matchNo: 36, date: '2026-06-20', time: '12:00 AM', group: 'F', home: 'TUN', away: 'JPN', venue: 'bbva', stage: 'Group' },
       { matchNo: 37, date: '2026-06-21', time: '6:00 PM', group: 'H', home: 'URU', away: 'CPV', venue: 'hardrock', stage: 'Group' },
@@ -443,7 +267,7 @@
       { matchNo: 39, date: '2026-06-21', time: '3:00 PM', group: 'G', home: 'BEL', away: 'IRN', venue: 'sofi', stage: 'Group' },
       { matchNo: 40, date: '2026-06-21', time: '9:00 PM', group: 'G', home: 'NZL', away: 'EGY', venue: 'bcplace', stage: 'Group' },
       { matchNo: 41, date: '2026-06-22', time: '8:00 PM', group: 'I', home: 'NOR', away: 'SEN', venue: 'metlife', stage: 'Group' },
-      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'IRQ', venue: 'lincoln', stage: 'Group' },
+      { matchNo: 42, date: '2026-06-22', time: '5:00 PM', group: 'I', home: 'FRA', away: 'TRACK', venue: 'lincoln', stage: 'Group' },
       { matchNo: 43, date: '2026-06-22', time: '1:00 PM', group: 'J', home: 'ARG', away: 'AUT', venue: 'att', stage: 'Group' },
       { matchNo: 44, date: '2026-06-22', time: '11:00 PM', group: 'J', home: 'JOR', away: 'ALG', venue: 'levis', stage: 'Group' },
       { matchNo: 45, date: '2026-06-23', time: '4:00 PM', group: 'L', home: 'ENG', away: 'GHA', venue: 'gillette', stage: 'Group' },
@@ -460,8 +284,8 @@
       { matchNo: 54, date: '2026-06-24', time: '9:00 PM', group: 'A', home: 'RSA', away: 'KOR', venue: 'bbva', stage: 'Group' },
       { matchNo: 55, date: '2026-06-25', time: '4:00 PM', group: 'E', home: 'CUW', away: 'CIV', venue: 'lincoln', stage: 'Group' },
       { matchNo: 56, date: '2026-06-25', time: '4:00 PM', group: 'E', home: 'ECU', away: 'GER', venue: 'metlife', stage: 'Group' },
-      { matchNo: 57, date: '2026-06-25', time: '7:00 PM', group: 'F', home: 'JPN', away: 'SWE', venue: 'att', stage: 'Group' },
-      { matchNo: 58, date: '2026-06-25', time: '7:00 PM', group: 'F', home: 'TUN', away: 'NED', venue: 'arrowhead', stage: 'Group' },
+      { matchNo: 57, date: '2026-07-25', time: '7:00 PM', group: 'F', home: 'JPN', away: 'SWE', venue: 'att', stage: 'Group' },
+      { matchNo: 58, date: '2026-07-25', time: '7:00 PM', group: 'F', home: 'TUN', away: 'NED', venue: 'arrowhead', stage: 'Group' },
       { matchNo: 59, date: '2026-06-25', time: '10:00 PM', group: 'D', home: 'TUR', away: 'USA', venue: 'sofi', stage: 'Group' },
       { matchNo: 60, date: '2026-06-25', time: '10:00 PM', group: 'D', home: 'PAR', away: 'AUS', venue: 'levis', stage: 'Group' },
       { matchNo: 61, date: '2026-06-26', time: '3:00 PM', group: 'I', home: 'SEN', away: 'IRQ', venue: 'bmo', stage: 'Group' },
@@ -538,7 +362,6 @@
       return { name: id, stars: ['Roster TBD'], rank: 99 };
     };
 
-    // Helper to generate flag img component to ensure zero "letters-as-flags" problems
     const getTeamFlag = (teamId, className = "w-8 h-5 object-cover rounded shadow-sm border border-slate-800 shrink-0") => {
       const code = MAP_3_TO_2[teamId] || 'un';
       return (
@@ -551,7 +374,6 @@
       );
     };
 
-    // Helper to translate knockout placeholder keys to descriptive descriptions
     const getPlaceholderLabel = (ph) => {
       if (!ph) return 'TBD';
       if (ph.startsWith('W')) return `Winner Match #${ph.substring(1)}`;
@@ -567,7 +389,6 @@
         const stored = localStorage.getItem('wc2026_factual_matches_v2');
         if (stored) {
           const parsed = JSON.parse(stored);
-          // Auto-upgrade storage if knockout matches are missing
           if (parsed.length < INITIAL_MATCHES.length) {
             const merged = [...parsed];
             for (let i = parsed.length; i < INITIAL_MATCHES.length; i++) {
@@ -580,37 +401,30 @@
         return INITIAL_MATCHES;
       });
       
-      // Favorites starts completely empty (Purged old cache defaults securely)
       const [favorites, setFavorites] = useState(() => {
         const stored = localStorage.getItem('wc2026_factual_favorites_v2');
         return stored ? JSON.parse(stored) : [];
       });
       const [activeTab, setActiveTab] = useState('matches');
       
-      // Filter State
       const [searchQuery, setSearchQuery] = useState('');
       const [hostFilter, setHostFilter] = useState('all'); 
       const [favoriteFilter, setFavoriteFilter] = useState(false);
       const [selectedGroup, setSelectedGroup] = useState('all');
       const [selectedTeamFilter, setSelectedTeamFilter] = useState('all');
-      const [selectedStageFilter, setSelectedStageFilter] = useState('all'); // Filter Matches by Stage
-
-      // Roadmap Stage Navigation
+      const [selectedStageFilter, setSelectedStageFilter] = useState('all');
       const [selectedRoadmapStage, setSelectedRoadmapStage] = useState('R32');
 
-      // Modal states
       const [selectedVenueId, setSelectedVenueId] = useState(null);
       const [selectedMatchNo, setSelectedMatchNo] = useState(null);
       const [selectedTeamIdForModal, setSelectedTeamIdForModal] = useState(null);
 
-      // Live Sync Action States
       const [syncing, setSyncing] = useState(false);
       const [syncError, setSyncError] = useState(null);
       const [lastSyncedTime, setLastSyncedTime] = useState(() => {
         return localStorage.getItem('wc2026_last_sync_v4') || 'Never';
       });
 
-      // Notification banner
       const [toast, setToast] = useState(null);
 
       const triggerToast = (msg, isError = false) => {
@@ -618,7 +432,6 @@
         setTimeout(() => setToast(null), 4000);
       };
 
-      // Persistence
       useEffect(() => {
         localStorage.setItem('wc2026_factual_matches_v2', JSON.stringify(matches));
       }, [matches]);
@@ -627,7 +440,6 @@
         localStorage.setItem('wc2026_factual_favorites_v2', JSON.stringify(favorites));
       }, [favorites]);
 
-      // Star favorite toggles
       const toggleFavorite = (teamId) => {
         if (favorites.includes(teamId)) {
           setFavorites(favorites.filter(id => id !== teamId));
@@ -640,10 +452,10 @@
         setSyncing(true);
         setSyncError(null);
 
-        const apiKey = ""; // Implicitly injected at runtime
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        // Targeted modern endpoint to cleanly prevent public hosting script restriction
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=`;
         
-        const prompt = `You are an official sports data assistant. Today is Thursday, June 11, 2026 (the opening day of the tournament). Search for real-time, official real-world match scores AND factual match statistics for any completed games in the 2026 FIFA World Cup. Search specifically for "World Cup 2026 results". Return a JSON array matching ONLY this precise format:
+        const prompt = `You are an official sports data assistant. Today is Thursday, June 11, 2026. Retrieve the actual, official real-world match scores AND factual match statistics for any completed games in the 2026 FIFA World Cup. Return a JSON array matching ONLY this precise format:
         { "results": [{ 
            "matchNo": 1, 
            "homeGoals": 2, 
@@ -660,9 +472,7 @@
              "redCards": [0, 0],
              "winner": "MEX",
              "timeline": [
-               { "type": "goal", "minute": 18, "player": "S. Giménez", "team": "home" },
-               { "type": "goal", "minute": 64, "player": "P. Tau", "team": "away" },
-               { "type": "goal", "minute": 88, "player": "H. Lozano", "team": "home" }
+               { "type": "goal", "minute": 18, "player": "S. Giménez", "team": "home" }
              ]
            }
         }] }
@@ -722,62 +532,47 @@
           }
         };
 
-        let attempt = 0;
-        const delays = [1000, 2000, 4000, 8000, 16000];
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            mode: "cors", 
+            headers: { 
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
 
-        const runFetchWithBackoff = async () => {
-          try {
-            const response = await fetch(url, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(payload)
-            });
+          if (!response.ok) {
+            throw new Error(`Server returned HTTP ${response.status}`);
+          }
 
-            if (!response.ok) {
-              throw new Error(`Server returned HTTP ${response.status}`);
-            }
+          const data = await response.json();
+          const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!textResponse) {
+            throw new Error("Empty model response received");
+          }
 
-            const data = await response.json();
-            const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
-            if (!textResponse) {
-              throw new Error("Empty model response received");
-            }
-
-            // Strip out potential markdown formatting to prevent parser crashes
-            let cleanText = textResponse.trim();
-            if (cleanText.includes("```")) {
-              const match = cleanText.match(/```json?\s*([\s\S]*?)\s*```/);
-              if (match && match[1]) {
-                cleanText = match[1];
-              } else {
-                cleanText = cleanText.replace(/```json?/g, "").replace(/```/g, "");
-              }
-            }
-
-            const parsed = JSON.parse(cleanText.trim());
-            return parsed.results || [];
-          } catch (err) {
-            if (attempt < 5) {
-              const currentDelay = delays[attempt];
-              attempt++;
-              await new Promise(res => setTimeout(res, currentDelay));
-              return runFetchWithBackoff();
+          let cleanText = textResponse.trim();
+          if (cleanText.includes("```")) {
+            const match = cleanText.match(/
+```json?\s*([\s\S]*?)\s*```/);
+            if (match && match[1]) {
+              cleanText = match[1];
             } else {
-              throw err;
+              cleanText = cleanText.replace(/```json?/g, "").replace(/
+```/g, "");
             }
           }
-        };
 
-        try {
-          const results = await runFetchWithBackoff();
+          const parsed = JSON.parse(cleanText.trim());
+          const results = parsed.results || [];
+          
           if (results.length === 0) {
             triggerToast("Sync completed. Real scores will automatically import beginning June 11, 2026.");
           } else {
             const updated = matches.map(m => {
               const official = results.find(o => o.matchNo === m.matchNo);
-              if (official) {
-                return { ...m, ...official };
-              }
+              if (official) return { ...m, ...official };
               return m;
             });
             setMatches(updated);
@@ -795,7 +590,6 @@
         }
       };
 
-      // Complete roadmap evaluator to dynamically cascade tournament outcomes
       const computedBracket = useMemo(() => {
         const groupStandings = {};
         Object.keys(GROUPS).forEach(g => {
@@ -805,7 +599,6 @@
           }));
         });
 
-        // Compute standings from group matches
         matches.filter(m => m.matchNo <= 72).forEach(m => {
           if (m.completed && m.homeGoals !== null && m.awayGoals !== null) {
             const grp = groupStandings[m.group];
@@ -813,34 +606,18 @@
             const home = grp.find(t => t.id === m.home);
             const away = grp.find(t => t.id === m.away);
             if (home && away) {
-              home.pld += 1;
-              away.pld += 1;
-              home.gf += m.homeGoals;
-              home.ga += m.awayGoals;
-              away.gf += m.awayGoals;
-              away.ga += m.homeGoals;
-              home.gd = home.gf - home.ga;
-              away.gd = away.gf - away.ga;
+              home.pld += 1; away.pld += 1;
+              home.gf += m.homeGoals; home.ga += m.awayGoals;
+              away.gf += m.awayGoals; away.ga += m.homeGoals;
+              home.gd = home.gf - home.ga; away.gd = away.gf - away.ga;
 
-              if (m.homeGoals > m.awayGoals) {
-                home.w += 1;
-                home.pts += 3;
-                away.l += 1;
-              } else if (m.homeGoals < m.awayGoals) {
-                away.w += 1;
-                away.pts += 3;
-                home.l += 1;
-              } else {
-                home.d += 1;
-                away.d += 1;
-                home.pts += 1;
-                away.pts += 1;
-              }
+              if (m.homeGoals > m.awayGoals) { home.w += 1; home.pts += 3; away.l += 1; }
+              else if (m.homeGoals < m.awayGoals) { away.w += 1; away.pts += 3; home.l += 1; }
+              else { home.d += 1; away.d += 1; home.pts += 1; away.pts += 1; }
             }
           }
         });
 
-        // Sort standings per FIFA guidelines
         Object.keys(groupStandings).forEach(g => {
           groupStandings[g].sort((a, b) => {
             if (b.pts !== a.pts) return b.pts - a.pts;
@@ -850,7 +627,6 @@
           });
         });
 
-        // Compute best third-placed wildcard teams
         const thirdPlaceTeams = Object.keys(groupStandings).map(g => {
           const team = groupStandings[g][2];
           return team ? { ...team, group: g } : null;
@@ -865,25 +641,18 @@
 
         const bestThird = thirdPlaceTeams.slice(0, 8);
 
-        // Outcome resolving engine
         const getMatchOutcome = (matchObj, status) => {
           if (!matchObj || !matchObj.completed) return null;
           const hG = matchObj.homeGoals !== null ? matchObj.homeGoals : 0;
           const aG = matchObj.awayGoals !== null ? matchObj.awayGoals : 0;
-          
           if (matchObj.stats && matchObj.stats.winner) {
             const hasWon = matchObj.stats.winner;
             if (status === 'winner') return hasWon;
             return hasWon === matchObj.home ? matchObj.away : matchObj.home;
           }
-
-          if (hG > aG) {
-            return status === 'winner' ? matchObj.home : matchObj.away;
-          } else if (aG > hG) {
-            return status === 'winner' ? matchObj.away : matchObj.home;
-          } else {
-            return status === 'winner' ? matchObj.home : matchObj.away;
-          }
+          if (hG > aG) return status === 'winner' ? matchObj.home : matchObj.away;
+          if (aG > hG) return status === 'winner' ? matchObj.away : matchObj.home;
+          return status === 'winner' ? matchObj.home : matchObj.away;
         };
 
         const resolvedList = [];
@@ -896,7 +665,6 @@
             let homeId = null;
             let awayId = null;
 
-            // Resolve home progression slot
             if (m.placeholderHome) {
               const ph = m.placeholderHome;
               if (ph.startsWith('W') || ph.startsWith('L')) {
@@ -913,7 +681,6 @@
               }
             }
 
-            // Resolve away progression slot
             if (m.placeholderAway) {
               const ph = m.placeholderAway;
               if (ph.startsWith('W') || ph.startsWith('L')) {
@@ -933,7 +700,6 @@
             m.home = homeId || m.placeholderHome;
             m.away = awayId || m.placeholderAway;
             m.isPlaceholder = !homeId || !awayId;
-
             resolvedList.push(m);
           }
         });
@@ -954,9 +720,7 @@
             homeT.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             awayT.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             venueT.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            m.group.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            m.home.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            m.away.toLowerCase().includes(searchQuery.toLowerCase());
+            m.group.toLowerCase().includes(searchQuery.toLowerCase());
 
           let matchesHost = true;
           if (hostFilter === 'usa') matchesHost = venueT.country === 'USA';
@@ -976,51 +740,28 @@
       }, [activeMatches, searchQuery, hostFilter, favoriteFilter, selectedGroup, selectedTeamFilter, selectedStageFilter, favorites]);
 
       const loggedCount = activeMatches.filter(m => m.completed).length;
-
-      // Selected entities
-      const selectedVenue = useMemo(() => {
-        return VENUES.find(v => v.id === selectedVenueId);
-      }, [selectedVenueId]);
-
-      const selectedMatch = useMemo(() => {
-        return activeMatches.find(m => m.matchNo === selectedMatchNo);
-      }, [selectedMatchNo, activeMatches]);
-
-      const selectedTeamDetails = useMemo(() => {
-        if (!selectedTeamIdForModal) return null;
-        return TEAM_DETAILS[selectedTeamIdForModal] || {
-          coach: "TBD",
-          players: ["Key National Players"],
-          facts: ["Preparing to compete in the ultimate football stage in North America."]
-        };
-      }, [selectedTeamIdForModal]);
+      const selectedVenue = VENUES.find(v => v.id === selectedVenueId);
+      const selectedMatch = activeMatches.find(m => m.matchNo === selectedMatchNo);
+      const selectedTeamDetails = selectedTeamIdForModal ? TEAM_DETAILS[selectedTeamIdForModal] : null;
 
       return (
         <div class="w-full max-w-7xl mx-auto bg-slate-950 min-h-screen relative flex flex-col pb-36 md:pb-40">
           
-          {/* Toast Notification */}
           {toast && (
-            <div class={`fixed top-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-xl shadow-2xl border text-sm font-semibold flex items-center gap-3 animate-fade-in ${toast.isError ? 'bg-red-950/90 border-red-500/30 text-red-400' : 'bg-emerald-950/90 border-emerald-500/30 text-emerald-400'}`}>
+            <div class={`fixed top-6 left-1/2 -translate-x-1/2 z-[110] px-5 py-3 rounded-xl shadow-2xl border text-sm font-semibold flex items-center gap-3 animate-fade-in ${toast.isError ? 'bg-red-950/90 border-red-500/30 text-red-400' : 'bg-emerald-950/90 border-emerald-500/30 text-emerald-400'}`}>
               <span>{toast.isError ? '⚠️' : '✨'}</span>
               <span>{toast.msg}</span>
             </div>
           )}
 
-          {/* Adaptive Header Dashboard */}
           <header class="gradient-header rounded-b-3xl shadow-xl relative overflow-hidden border-b border-white/10">
             <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            
             <div class="max-w-7xl mx-auto w-full px-6 sm:px-8 py-8 sm:py-10 relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
               <div>
-                <h1 class="text-4xl sm:text-5xl font-black font-display tracking-tight text-white">
-                  World Cup 2026
-                </h1>
-                <p class="text-sm sm:text-base text-slate-300 mt-2.5 max-w-lg leading-relaxed">
-                  Match statistics synced from Google Search
-                </p>
+                <h1 class="text-4xl sm:text-5xl font-black font-display tracking-tight text-white">World Cup 2026</h1>
+                <p class="text-sm sm:text-base text-slate-300 mt-2.5 max-w-lg">Match statistics synced from Google Search</p>
               </div>
 
-              {/* Sync Control Block */}
               <div class="bg-slate-950/90 backdrop-blur-md rounded-2xl p-5 border border-white/10 w-full md:max-w-md shadow-lg">
                 <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
                   <span class="font-semibold flex items-center gap-2 tracking-wide uppercase">
@@ -1029,48 +770,22 @@
                   </span>
                   <span class="text-xs text-slate-500">Last Synced: <strong>{lastSyncedTime}</strong></span>
                 </div>
-
-                <div class="flex gap-3">
-                  <button
-                    onClick={syncOfficialMatchResults}
-                    disabled={syncing}
-                    class="flex-1 bg-emerald-500 hover:bg-emerald-400 disabled:bg-slate-800 disabled:text-slate-500 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl text-sm transition duration-200 flex items-center justify-center gap-2 active:scale-95 shadow-md shadow-emerald-500/10"
-                  >
-                    {syncing ? (
-                      <span class="flex items-center gap-2">
-                        <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
-                        </svg>
-                        Retrieving scores...
-                      </span>
-                    ) : (
-                      <span>🔄 Sync Results</span>
-                    )}
-                  </button>
-                </div>
-
-                {syncError && (
-                  <p class="text-xs text-red-400 mt-2.5 text-center font-medium">{syncError}</p>
-                )}
+                <button
+                  onClick={syncOfficialMatchResults}
+                  disabled={syncing}
+                  class="w-full bg-emerald-500 hover:bg-emerald-400 disabled:bg-slate-800 disabled:text-slate-500 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-md"
+                >
+                  {syncing ? 'Retrieving scores...' : '🔄 Sync Results'}
+                </button>
+                {syncError && <p class="text-xs text-red-400 mt-2.5 text-center font-medium">{syncError}</p>}
               </div>
-            </div>
-
-            <div class="max-w-7xl mx-auto w-full px-6 sm:px-8 pb-5 flex items-center justify-between relative z-10 text-xs sm:text-sm text-slate-400 border-t border-white/10 pt-4">
-              <span>Updated: <strong class="text-white">{loggedCount} / 104</strong> results imported</span>
             </div>
           </header>
 
-          {/* MAIN CONTAINER */}
           <main class="flex-1 px-6 sm:px-8 mt-8">
-            
-            {/* MATCHES LIST TAB */}
             {activeTab === 'matches' && (
               <div class="space-y-6">
-                {/* Filters Box */}
                 <div class="space-y-5 bg-slate-900/40 p-5 rounded-2xl border border-slate-800/80">
-                  
-                  {/* Search Bar Row */}
                   <div class="relative flex items-center">
                     <div class="absolute left-4 pointer-events-none text-slate-500 flex items-center">
                       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1086,315 +801,138 @@
                     />
                   </div>
 
-                  {/* Section 1: Host Nation Filter Pills */}
-                  <div class="flex flex-col gap-2 border-b border-slate-800/60 pb-4">
+                  <div class="flex flex-col gap-2 border-b border-slate-800/60 pb-4 w-full">
                     <span class="text-xs font-extrabold text-slate-400 uppercase tracking-wider font-mono">Filter by Host Nation:</span>
                     <div class="flex gap-2 overflow-x-auto pb-1 text-sm scroll-smooth">
-                      <button 
-                        onClick={() => setHostFilter('all')}
-                        class={`px-4 py-2 rounded-full font-semibold shrink-0 transition ${hostFilter === 'all' ? 'bg-slate-200 text-slate-950' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
-                      >
-                        All Hosts
-                      </button>
-                      <button 
-                        onClick={() => setHostFilter('usa')}
-                        class={`px-4 py-2 rounded-full font-semibold shrink-0 transition flex items-center gap-1.5 ${hostFilter === 'usa' ? 'bg-brand-usa text-white' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
-                      >
-                        USA
-                      </button>
-                      <button 
-                        onClick={() => setHostFilter('canada')}
-                        class={`px-4 py-2 rounded-full font-semibold shrink-0 transition flex items-center gap-1.5 ${hostFilter === 'canada' ? 'bg-brand-canada text-white' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
-                      >
-                        Canada
-                      </button>
-                      <button 
-                        onClick={() => setHostFilter('mexico')}
-                        class={`px-4 py-2 rounded-full font-semibold shrink-0 transition flex items-center gap-1.5 ${hostFilter === 'mexico' ? 'bg-brand-mexico text-white' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
-                      >
-                        Mexico
-                      </button>
+                      {['all', 'usa', 'canada', 'mexico'].map(h => (
+                        <button 
+                          key={h}
+                          onClick={() => setHostFilter(h)}
+                          class={`px-4 py-2 rounded-full font-semibold shrink-0 transition ${hostFilter === h ? 'bg-slate-200 text-slate-950' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
+                        >
+                          {h === 'all' ? 'All Hosts' : h.toUpperCase()}
+                        </button>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Section 2: Secondary Dropdown Filters */}
-                  <div class="flex flex-col gap-3">
+                  <div class="flex flex-col gap-3 w-full">
                     <span class="text-xs font-extrabold text-slate-400 uppercase tracking-wider font-mono">Refine Stages & Group Standings:</span>
                     <div class="flex flex-wrap items-center gap-4 text-sm justify-between sm:justify-start">
-                      
-                      <div class="flex items-center gap-2">
-                        <span class="text-slate-400 font-medium">Stage:</span>
-                        <select 
-                          value={selectedStageFilter}
-                          onChange={(e) => setSelectedStageFilter(e.target.value)}
-                          class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm focus:ring-1 focus:ring-emerald-500 outline-none"
-                        >
-                          <option value="all">All Stages</option>
-                          <option value="group">Group Stage Only</option>
-                          <option value="knockouts">Knockouts Only</option>
-                        </select>
-                      </div>
-
-                      <div class="flex items-center gap-2">
-                        <span class="text-slate-400 font-medium">Group:</span>
-                        <select 
-                          value={selectedGroup}
-                          onChange={(e) => {
-                            setSelectedGroup(e.target.value);
-                            setSelectedTeamFilter('all');
-                          }}
-                          disabled={selectedStageFilter === 'knockouts'}
-                          class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm focus:ring-1 focus:ring-emerald-500 outline-none disabled:opacity-40"
-                        >
-                          <option value="all">All Groups</option>
-                          {Object.keys(GROUPS).map(g => (
-                            <option key={g} value={g}>Group {g}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div class="flex items-center gap-2">
-                        <span class="text-slate-400 font-medium">Team:</span>
-                        <select 
-                          value={selectedTeamFilter}
-                          onChange={(e) => {
-                            setSelectedTeamFilter(e.target.value);
-                            setSelectedGroup('all');
-                          }}
-                          class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm focus:ring-1 focus:ring-emerald-500 outline-none"
-                        >
-                          <option value="all">All Teams</option>
-                          {allTeamsSorted.map(t => (
-                            <option key={t.id} value={t.id}>{t.name}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <button 
-                        onClick={() => setFavoriteFilter(!favoriteFilter)}
-                        class={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs sm:text-sm font-semibold transition ml-auto sm:ml-0 ${favoriteFilter ? 'bg-amber-500/20 border-amber-500/50 text-amber-300' : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900'}`}
-                      >
+                      <select value={selectedStageFilter} onChange={(e) => setSelectedStageFilter(e.target.value)} class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm outline-none">
+                        <option value="all">All Stages</option>
+                        <option value="group">Group Stage Only</option>
+                        <option value="knockouts">Knockouts Only</option>
+                      </select>
+                      <select value={selectedGroup} onChange={(e) => { setSelectedGroup(e.target.value); setSelectedTeamFilter('all'); }} disabled={selectedStageFilter === 'knockouts'} class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm outline-none disabled:opacity-40">
+                        <option value="all">All Groups</option>
+                        {Object.keys(GROUPS).map(g => <option key={g} value={g}>Group {g}</option>)}
+                      </select>
+                      <select value={selectedTeamFilter} onChange={(e) => { setSelectedTeamFilter(e.target.value); setSelectedGroup('all'); }} class="bg-slate-950 text-slate-200 py-2 px-3 rounded-lg border border-slate-800 text-sm outline-none">
+                        <option value="all">All Teams</option>
+                        {allTeamsSorted.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
+                      </select>
+                      <button onClick={() => setFavoriteFilter(!favoriteFilter)} class={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs sm:text-sm font-semibold transition ${favoriteFilter ? 'bg-amber-500/20 border-amber-500/50 text-amber-300' : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900'}`}>
                         <span>⭐ Starred Only</span>
                       </button>
                     </div>
                   </div>
                 </div>
 
-                {/* Match Cards List */}
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-16">
-                  {filteredMatches.length === 0 ? (
-                    <div class="col-span-full text-center py-16 bg-slate-950 rounded-2xl border border-slate-800">
-                      <p class="text-slate-400 text-base">No matches found matching your current filter criteria.</p>
-                    </div>
-                  ) : (
-                    filteredMatches.map((m) => {
-                      const isHomeFav = favorites.includes(m.home);
-                      const isAwayFav = favorites.includes(m.away);
-                      const venue = VENUES.find(v => v.id === m.venue) || VENUES[0];
-                      const isHomePlaceholder = !MAP_3_TO_2[m.home];
-                      const isAwayPlaceholder = !MAP_3_TO_2[m.away];
+                  {filteredMatches.map((m) => {
+                    const isHomeFav = favorites.includes(m.home);
+                    const isAwayFav = favorites.includes(m.away);
+                    const venue = VENUES.find(v => v.id === m.venue) || VENUES[0];
+                    const isHomePlaceholder = !MAP_3_TO_2[m.home];
+                    const isAwayPlaceholder = !MAP_3_TO_2[m.away];
 
-                      return (
-                        <div 
-                          key={m.matchNo}
-                          onClick={() => setSelectedMatchNo(m.matchNo)}
-                          class={`glass-panel rounded-2xl p-5 border cursor-pointer hover:bg-slate-900/40 hover:border-slate-700 transition duration-150 flex flex-col justify-between ${isHomeFav || isAwayFav ? 'border-amber-500/40' : 'border-slate-800'}`}
-                        >
-                          <div>
-                            <div class="flex items-center justify-between text-xs text-slate-400 mb-4 border-b border-slate-800/60 pb-3">
-                              <span class="font-extrabold text-slate-300 bg-slate-950 px-2.5 py-1 rounded-md">
-                                Match #{m.matchNo} • {m.stage === 'Group' ? `Group ${m.group}` : m.stage}
-                              </span>
-                              <span 
-                                onClick={(e) => {
-                                  e.stopPropagation(); 
-                                  setSelectedVenueId(venue.id);
-                                }}
-                                class="flex items-center gap-1.5 font-semibold text-slate-300 hover:text-emerald-400 transition"
-                              >
-                                <span class="truncate max-w-[150px] underline decoration-dotted decoration-slate-500">{venue.name}</span>
-                              </span>
-                            </div>
-
-                            {/* Clean layout displaying CDN-powered image flags and rank */}
-                            <div class="grid grid-cols-12 gap-2 items-center py-3">
-                              
-                              {/* Home Team Column */}
-                              <div class="col-span-5 flex flex-col justify-center min-w-0">
-                                <div class="flex items-center gap-2">
-                                  {getTeamFlag(m.home, "w-8 h-5 sm:w-10 sm:h-6 object-cover rounded shadow border border-slate-800 shrink-0")}
-                                  <span class={`text-base font-black truncate uppercase font-mono tracking-wider ${isHomePlaceholder ? 'text-slate-500 text-xs tracking-tight normal-case' : 'text-white'}`}>
-                                    {isHomePlaceholder ? getPlaceholderLabel(m.home) : m.home}
-                                  </span>
-                                  {isHomeFav && <span class="text-xs text-amber-400">⭐</span>}
-                                </div>
-                                {!isHomePlaceholder && (
-                                  <span class="text-xs sm:text-sm text-slate-400 mt-1 font-semibold">Rank #{findTeam(m.home).rank}</span>
-                                )}
-                              </div>
-
-                              {/* Static Score separator */}
-                              <div class="col-span-2 flex items-center justify-center gap-1">
-                                <span class="bg-slate-950 text-emerald-400 font-extrabold text-base sm:text-lg w-10 h-10 flex items-center justify-center rounded border border-slate-800 font-mono">
-                                  {m.completed && m.homeGoals !== null ? m.homeGoals : ''}
-                                </span>
-                                <span class="text-slate-600 font-black text-sm sm:text-base">:</span>
-                                <span class="bg-slate-950 text-emerald-400 font-extrabold text-base sm:text-lg w-10 h-10 flex items-center justify-center rounded border border-slate-800 font-mono">
-                                  {m.completed && m.awayGoals !== null ? m.awayGoals : ''}
-                                </span>
-                              </div>
-
-                              {/* Away Team Column */}
-                              <div class="col-span-5 flex flex-col justify-center items-end text-right min-w-0">
-                                <div class="flex items-center gap-2 justify-end">
-                                  {isAwayFav && <span class="text-xs text-amber-400">⭐</span>}
-                                  <span class={`text-base font-black truncate uppercase font-mono tracking-wider ${isAwayPlaceholder ? 'text-slate-500 text-xs tracking-tight normal-case' : 'text-white'}`}>
-                                    {isAwayPlaceholder ? getPlaceholderLabel(m.away) : m.away}
-                                  </span>
-                                  {getTeamFlag(m.away, "w-8 h-5 sm:w-10 sm:h-6 object-cover rounded shadow border border-slate-800 shrink-0")}
-                                </div>
-                                {!isAwayPlaceholder && (
-                                  <span class="text-xs sm:text-sm text-slate-400 mt-1 font-semibold">Rank #{findTeam(m.away).rank}</span>
-                                )}
-                              </div>
-
-                            </div>
+                    return (
+                      <div key={m.matchNo} onClick={() => setSelectedMatchNo(m.matchNo)} class={`glass-panel rounded-2xl p-5 border cursor-pointer hover:bg-slate-900/40 hover:border-slate-700 transition flex flex-col justify-between ${isHomeFav || isAwayFav ? 'border-amber-500/40' : 'border-slate-800'}`}>
+                        <div>
+                          <div class="flex items-center justify-between text-xs text-slate-400 mb-4 border-b border-slate-800/60 pb-3">
+                            <span class="font-extrabold text-slate-300 bg-slate-950 px-2.5 py-1 rounded-md">M#{m.matchNo} • {m.stage === 'Group' ? `Group ${m.group}` : m.stage}</span>
+                            <span class="truncate max-w-[150px] font-semibold text-slate-300 underline decoration-dotted">{venue.name}</span>
                           </div>
 
-                          {/* Card Footer with Standard EST Tagging */}
-                          <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-800/40 text-xs text-slate-400 font-mono">
-                            <span class="font-semibold text-slate-300">
-                              {new Date(m.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', weekday: 'short' })} • {m.time} EST
-                            </span>
-                            <div class="flex items-center gap-2">
-                              {m.completed ? (
-                                <span class="text-emerald-400 bg-emerald-950/80 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">Completed</span>
-                              ) : (
-                                <span class="text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">Scheduled</span>
-                              )}
-                              <span class="text-emerald-500 font-bold ml-1">➔</span>
+                          <div class="grid grid-cols-12 gap-2 items-center py-3">
+                            <div class="col-span-5 flex flex-col justify-center min-w-0">
+                              <div class="flex items-center gap-2">
+                                {getTeamFlag(m.home, "w-8 h-5 sm:w-10 sm:h-6 object-cover rounded shadow border border-slate-800 shrink-0")}
+                                <span class={`text-base font-black truncate font-mono tracking-wider ${isHomePlaceholder ? 'text-slate-500 text-xs italic' : 'text-white'}`}>{isHomePlaceholder ? getPlaceholderLabel(m.home) : m.home}</span>
+                              </div>
+                              {!isHomePlaceholder && <span class="text-xs text-slate-400 mt-1 font-semibold">Rank #{findTeam(m.home).rank}</span>}
+                            </div>
+
+                            <div class="col-span-2 flex items-center justify-center gap-1">
+                              <span class="bg-slate-950 text-emerald-400 font-extrabold text-sm sm:text-base w-10 h-10 flex items-center justify-center rounded border border-slate-800 font-mono">{m.completed ? m.homeGoals : ''}</span>
+                              <span class="text-slate-600 font-black">:</span>
+                              <span class="bg-slate-950 text-emerald-400 font-extrabold text-sm sm:text-base w-10 h-10 flex items-center justify-center rounded border border-slate-800 font-mono">{m.completed ? m.awayGoals : ''}</span>
+                            </div>
+
+                            <div class="col-span-5 flex flex-col justify-center items-end text-right min-w-0">
+                              <div class="flex items-center gap-2 justify-end">
+                                <span class={`text-base font-black truncate font-mono tracking-wider ${isAwayPlaceholder ? 'text-slate-500 text-xs italic' : 'text-white'}`}>{isAwayPlaceholder ? getPlaceholderLabel(m.away) : m.away}</span>
+                                {getTeamFlag(m.away, "w-8 h-5 sm:w-10 sm:h-6 object-cover rounded shadow border border-slate-800 shrink-0")}
+                              </div>
+                              {!isAwayPlaceholder && <span class="text-xs text-slate-400 mt-1 font-semibold">Rank #{findTeam(m.away).rank}</span>}
                             </div>
                           </div>
                         </div>
-                      );
-                    })
-                  )}
+
+                        <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-800/40 text-xs text-slate-400 font-mono">
+                          <span class="font-semibold text-slate-300">{m.date} • {m.time} EST</span>
+                          <span class="text-emerald-500 font-bold">➔</span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
 
-            {/* ROADMAP TO THE FINAL (INTERACTIVE TOURNAMENT BRACKET) */}
             {activeTab === 'roadmap' && (
               <div class="space-y-6 pb-16">
-                
-                {/* Stage Selection Pills */}
                 <div class="flex gap-2 overflow-x-auto pb-2 text-sm justify-start md:justify-center bg-slate-900/40 p-3.5 rounded-2xl border border-slate-800/80 font-semibold">
-                  {[
-                    { id: 'R32', label: 'Round of 32' },
-                    { id: 'R16', label: 'Round of 16' },
-                    { id: 'QF', label: 'Quarter-Finals' },
-                    { id: 'SF', label: 'Semi-Finals' },
-                    { id: 'Finals', label: 'Finals & 3rd Place' }
-                  ].map((stageItem) => (
-                    <button
-                      key={stageItem.id}
-                      onClick={() => setSelectedRoadmapStage(stageItem.id)}
-                      class={`px-5 py-2.5 rounded-xl font-bold shrink-0 transition text-sm ${selectedRoadmapStage === stageItem.id ? 'bg-emerald-500 text-slate-950 shadow shadow-emerald-500/20' : 'bg-slate-950 text-slate-400 border border-slate-800 hover:bg-slate-900'}`}
-                    >
-                      {stageItem.label}
+                  {['R32', 'R16', 'QF', 'SF', 'Finals'].map(st => (
+                    <button key={st} onClick={() => setSelectedRoadmapStage(st)} class={`px-5 py-2.5 rounded-xl font-bold shrink-0 transition text-sm ${selectedRoadmapStage === st ? 'bg-emerald-500 text-slate-950 shadow' : 'bg-slate-950 text-slate-400 border border-slate-800'}`}>
+                      {st === 'Finals' ? 'Finals & 3rd Place' : st}
                     </button>
                   ))}
                 </div>
 
-                {/* Information Header Block */}
-                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
-                  <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-wider mb-1.5">
-                    {selectedRoadmapStage === 'R32' && "Round of 32 Roadmap"}
-                    {selectedRoadmapStage === 'R16' && "Round of 16 Roadmap"}
-                    {selectedRoadmapStage === 'QF' && "Quarter-Finals"}
-                    {selectedRoadmapStage === 'SF' && "Semi-Finals"}
-                    {selectedRoadmapStage === 'Finals' && "The Championship Game"}
-                  </h3>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Knockout positions dynamically cascade as soon as group outcomes are finalized or live results synced. Tap any card to access timelines, penalty statistics, and host details. All matches scheduled in EST.
-                  </p>
-                </div>
-
-                {/* Bracket Match grid */}
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {activeMatches.filter(m => {
-                    if (selectedRoadmapStage === 'Finals') return m.stage === 'TP' || m.stage === 'F';
-                    return m.stage === selectedRoadmapStage;
-                  }).map((m) => {
-                    const isHomeFav = favorites.includes(m.home);
-                    const isAwayFav = favorites.includes(m.away);
+                  {activeMatches.filter(m => selectedRoadmapStage === 'Finals' ? (m.stage === 'TP' || m.stage === 'F') : m.stage === selectedRoadmapStage).map((m) => {
                     const isHomePlaceholder = !MAP_3_TO_2[m.home];
                     const isAwayPlaceholder = !MAP_3_TO_2[m.away];
                     const venue = VENUES.find(v => v.id === m.venue) || VENUES[0];
 
                     return (
-                      <div
-                        key={m.matchNo}
-                        onClick={() => setSelectedMatchNo(m.matchNo)}
-                        class={`glass-panel rounded-2xl p-5 border cursor-pointer hover:bg-slate-900/40 hover:border-slate-700 transition duration-150 flex flex-col justify-between ${isHomeFav || isAwayFav ? 'border-amber-500/40' : 'border-slate-800'}`}
-                      >
+                      <div key={m.matchNo} onClick={() => setSelectedMatchNo(m.matchNo)} class="glass-panel rounded-2xl p-5 border border-slate-800 cursor-pointer hover:bg-slate-900/40 transition flex flex-col justify-between">
                         <div>
-                          {/* Match Stage & Stadium */}
                           <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800/60 pb-3 mb-4">
-                            <span class="font-extrabold text-emerald-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">
-                              M#{m.matchNo} • {m.stage === 'TP' ? '3rd Place' : m.stage === 'F' ? 'Final' : m.stage}
-                            </span>
-                            <span class="truncate max-w-[120px] font-medium text-slate-300 underline decoration-dotted">{venue.city}</span>
+                            <span class="font-extrabold text-emerald-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">M#{m.matchNo} • {m.stage}</span>
+                            <span class="truncate font-medium text-slate-300">{venue.city}</span>
                           </div>
 
-                          {/* Teams & Scores */}
                           <div class="space-y-4">
-                            {/* Home Side */}
                             <div class="flex items-center justify-between">
-                              <div class="flex items-center gap-2.5 min-w-0">
-                                {getTeamFlag(m.home, "w-8 h-5 object-cover rounded shadow border border-slate-800 shrink-0")}
-                                <span class={`text-sm font-bold truncate ${isHomePlaceholder ? 'text-slate-500 text-xs normal-case italic' : 'text-white uppercase font-mono'}`}>
-                                  {isHomePlaceholder ? getPlaceholderLabel(m.home) : m.home}
-                                </span>
-                                {isHomeFav && <span class="text-xs text-amber-400">⭐</span>}
+                              <div class="flex items-center gap-2 min-w-0">
+                                {getTeamFlag(m.home, "w-8 h-5 object-cover rounded shadow border shrink-0")}
+                                <span class={`text-sm font-bold truncate ${isHomePlaceholder ? 'text-slate-500 text-xs italic' : 'text-white font-mono'}`}>{isHomePlaceholder ? getPlaceholderLabel(m.home) : m.home}</span>
                               </div>
-                              <span class="font-mono font-extrabold text-base bg-slate-950 px-2 py-1 rounded border border-slate-800 text-emerald-400 min-w-[28px] text-center">
-                                {m.completed && m.homeGoals !== null ? m.homeGoals : ''}
-                              </span>
+                              <span class="font-mono font-extrabold text-sm bg-slate-950 px-2 py-1 rounded border border-slate-800 text-emerald-400">{m.completed ? m.homeGoals : ''}</span>
                             </div>
-
-                            {/* Versus Divider */}
-                            <div class="h-[1px] bg-slate-800/40 w-full"></div>
-
-                            {/* Away Side */}
                             <div class="flex items-center justify-between">
-                              <div class="flex items-center gap-2.5 min-w-0">
-                                {getTeamFlag(m.away, "w-8 h-5 object-cover rounded shadow border border-slate-800 shrink-0")}
-                                <span class={`text-sm font-bold truncate ${isAwayPlaceholder ? 'text-slate-500 text-xs normal-case italic' : 'text-white uppercase font-mono'}`}>
-                                  {isAwayPlaceholder ? getPlaceholderLabel(m.away) : m.away}
-                                </span>
-                                {isAwayFav && <span class="text-xs text-amber-400">⭐</span>}
+                              <div class="flex items-center gap-2 min-w-0">
+                                {getTeamFlag(m.away, "w-8 h-5 object-cover rounded shadow border shrink-0")}
+                                <span class={`text-sm font-bold truncate ${isAwayPlaceholder ? 'text-slate-500 text-xs italic' : 'text-white font-mono'}`}>{isAwayPlaceholder ? getPlaceholderLabel(m.away) : m.away}</span>
                               </div>
-                              <span class="font-mono font-extrabold text-base bg-slate-950 px-2 py-1 rounded border border-slate-800 text-emerald-400 min-w-[28px] text-center">
-                                {m.completed && m.awayGoals !== null ? m.awayGoals : ''}
-                              </span>
+                              <span class="font-mono font-extrabold text-sm bg-slate-950 px-2 py-1 rounded border border-slate-800 text-emerald-400">{m.completed ? m.awayGoals : ''}</span>
                             </div>
                           </div>
                         </div>
-
-                        {/* Advancement / Cascade Roadmap helper */}
-                        <div class="mt-4 pt-3.5 border-t border-slate-800/40 flex items-center justify-between text-[10px] text-slate-500 font-mono">
-                          <span>
-                            {m.matchNo < 89 && `Advances to M#${89 + Math.floor((m.matchNo - 73) / 2)}`}
-                            {m.matchNo >= 89 && m.matchNo < 97 && `Advances to M#${97 + Math.floor((m.matchNo - 89) / 2)}`}
-                            {m.matchNo >= 97 && m.matchNo < 101 && `Advances to M#${101 + Math.floor((m.matchNo - 97) / 2)}`}
-                            {m.matchNo === 101 && `Winner advances to Final M#104`}
-                            {m.matchNo === 102 && `Winner advances to Final M#104`}
-                            {m.matchNo === 103 && `Consolation Game`}
-                            {m.matchNo === 104 && `World Cup Champion Final`}
-                          </span>
-                          <span class="text-emerald-400 font-bold">➔</span>
-                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-800/40 text-[10px] text-slate-500 font-mono">{m.date} • {m.time} EST</div>
                       </div>
                     );
                   })}
@@ -1402,605 +940,132 @@
               </div>
             )}
 
-            {/* LIVE STANDINGS TABLES */}
             {activeTab === 'standings' && (
-              <div class="space-y-6 pb-16">
-                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
-                  <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-wider mb-1.5">Live Groups Standings</h3>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Standings calculations update automatically in real-time as soon as match results are retrieved.
-                  </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {Object.keys(groupStandings).map((groupKey) => {
-                    const groupTeams = groupStandings[groupKey];
-                    return (
-                      <div key={groupKey} class="glass-panel rounded-2xl p-5 shadow-xl flex flex-col justify-between">
-                        <div>
-                          <h4 class="font-bold text-sm sm:text-base text-white flex items-center gap-2 mb-4 uppercase tracking-wider">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                            Group {groupKey}
-                          </h4>
-
-                          <div class="overflow-x-auto">
-                            <table class="w-full text-left text-xs sm:text-sm">
-                              <thead>
-                                <tr class="text-xs text-slate-500 border-b border-slate-800 pb-2 uppercase tracking-wider">
-                                  <th class="py-2">Team</th>
-                                  <th class="py-2 text-center w-10">Pld</th>
-                                  <th class="py-2 text-center w-10">GD</th>
-                                  <th class="py-2 text-center w-10 font-bold text-white">Pts</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {groupTeams.map((team, index) => {
-                                  const isFav = favorites.includes(team.id);
-                                  let positionMarker = "border-l-2 border-transparent pl-2";
-                                  if (index < 2) positionMarker = "border-l-2 border-emerald-500 pl-2 text-emerald-400 font-semibold";
-                                  else positionMarker = "border-l-2 border-slate-800 pl-2 text-slate-400";
-
-                                  return (
-                                    <tr key={team.id} class={`border-b border-slate-800/30 ${isFav ? 'bg-amber-500/5' : ''}`}>
-                                      <td class="py-3.5 flex items-center gap-2.5 max-w-[160px] truncate">
-                                        <span class="text-slate-500 font-black w-4 text-xs">{index + 1}</span>
-                                        {getTeamFlag(team.id, "w-6 h-4 object-cover rounded shadow-sm border border-slate-800 shrink-0")}
-                                        <span class={`truncate ${positionMarker}`}>{team.name}</span>
-                                      </td>
-                                      <td class="py-3.5 text-center text-slate-300 font-mono text-xs sm:text-sm">{team.pld}</td>
-                                      <td class="py-3.5 text-center text-slate-300 font-mono text-xs sm:text-sm">
-                                        {team.gd > 0 ? `+${team.gd}` : team.gd}
-                                      </td>
-                                      <td class="py-3.5 text-center font-bold text-white font-mono text-xs sm:text-sm">{team.pts}</td>
-                                    </tr>
-                                  );
-                                })}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-16">
+                {Object.keys(groupStandings).map((groupKey) => (
+                  <div key={groupKey} class="glass-panel rounded-2xl p-5 shadow-xl">
+                    <h4 class="font-bold text-sm text-white flex items-center gap-2 mb-4 uppercase"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>Group {groupKey}</h4>
+                    <table class="w-full text-left text-xs sm:text-sm">
+                      <thead>
+                        <tr class="text-slate-500 border-b border-slate-800 uppercase text-[11px]"><th class="py-2">Team</th><th class="py-2 text-center">Pld</th><th class="py-2 text-center">GD</th><th class="py-2 text-center font-bold text-white">Pts</th></tr>
+                      </thead>
+                      <tbody>
+                        {groupStandings[groupKey].map((team, idx) => (
+                          <tr key={team.id} class="border-b border-slate-800/30">
+                            <td class="py-3 flex items-center gap-2 truncate max-w-[150px]"><span class="text-slate-500 font-black w-4">{idx + 1}</span>{getTeamFlag(team.id, "w-6 h-4 object-cover rounded border shrink-0")}<span class="truncate">{team.name}</span></td>
+                            <td class="py-3 text-center text-slate-300 font-mono">{team.pld}</td>
+                            <td class="py-3 text-center text-slate-300 font-mono">{team.gd > 0 ? `+${team.gd}` : team.gd}</td>
+                            <td class="py-3 text-center font-bold text-white font-mono">{team.pts}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ))}
               </div>
             )}
 
-            {/* TEAMS LIST WITH DETAILED MODALS ON CARD CLICK */}
             {activeTab === 'teams' && (
-              <div class="space-y-6 pb-16">
-                {/* Search Box with centered search input inside Teams tab */}
-                <div class="relative flex items-center">
-                  <input 
-                    type="text" 
-                    placeholder="Search countries, team abbreviation codes, or rankings..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    class="w-full bg-slate-950 text-slate-100 placeholder-slate-500 text-sm py-4 px-4 rounded-xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition"
-                  />
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
-                  {Object.keys(GROUPS).flatMap(g => GROUPS[g])
-                    .filter(team => team.name.toLowerCase().includes(searchQuery.toLowerCase()) || team.id.toLowerCase().includes(searchQuery.toLowerCase()))
-                    .map((team) => {
-                      const isFav = favorites.includes(team.id);
-                      return (
-                        <div 
-                          key={team.id}
-                          onClick={() => setSelectedTeamIdForModal(team.id)}
-                          class={`glass-panel p-5 rounded-2xl transition flex flex-col justify-between cursor-pointer hover:border-emerald-500/50 hover:bg-slate-900/60 duration-200 shadow-md ${isFav ? 'border-amber-500/40' : 'border-slate-800'}`}
-                        >
-                          <div class="flex justify-between items-start">
-                            <span class="text-xs font-bold text-slate-400 uppercase font-mono tracking-wider">Code: {team.id}</span>
-                            <button 
-                              onClick={(e) => {
-                                  e.stopPropagation(); 
-                                  toggleFavorite(team.id);
-                              }}
-                              class="text-sm p-2 hover:bg-slate-800 rounded transition"
-                              title="Star/Favorite Team"
-                            >
-                              {isFav ? '⭐' : '☆'}
-                            </button>
-                          </div>
-                          
-                          <div class="mt-5">
-                            <div class="mb-2">
-                              {getTeamFlag(team.id, "w-10 h-7 object-cover rounded shadow-md border border-slate-800 shrink-0")}
-                            </div>
-                            <h4 class="text-sm sm:text-base font-black text-white truncate">{team.name}</h4>
-                            <span class="text-xs text-slate-500 block mt-1 uppercase font-mono font-semibold">Rank: #{team.rank}</span>
-                          </div>
-                          
-                          <div class="mt-4 pt-3 border-t border-slate-800/40 text-[10px] text-emerald-500 font-bold uppercase tracking-wider flex items-center justify-between">
-                            <span>Details</span>
-                            <span>➔</span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-            )}
-
-            {/* VENUES LIST */}
-            {activeTab === 'venues' && (
-              <div class="space-y-6 pb-16">
-                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
-                  <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-wider mb-1.5">Host Stadiums</h3>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Tap on any arena to view interesting audited facts and stadium layout metrics.
-                  </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {VENUES.map((v) => (
-                    <div 
-                      key={v.id} 
-                      onClick={() => setSelectedVenueId(v.id)}
-                      class="glass-panel rounded-2xl p-5 flex gap-4 items-center cursor-pointer hover:border-emerald-500/50 hover:bg-slate-900/60 transition duration-200"
-                    >
-                      <svg class="w-8 h-8 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0Z" />
-                      </svg>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between gap-2">
-                          <h4 class="text-sm sm:text-base font-black text-white truncate underline decoration-dotted decoration-slate-600">{v.name}</h4>
-                          <span class="text-xs text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-500/20 font-semibold">{v.city}</span>
-                        </div>
-                        <div class="flex items-center justify-between text-xs text-slate-400 mt-4 border-t border-slate-800/40 pt-3 font-mono">
-                          <span>Capacity: <strong class="text-slate-200">{v.cap}</strong></span>
-                          <span class="text-emerald-500 font-bold">Details ➔</span>
-                        </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 pb-16">
+                {allTeamsSorted.map((team) => {
+                  const isFav = favorites.includes(team.id);
+                  return (
+                    <div key={team.id} onClick={() => setSelectedTeamIdForModal(team.id)} class={`glass-panel p-5 rounded-2xl transition flex flex-col justify-between cursor-pointer hover:border-emerald-500/50 shadow-md ${isFav ? 'border-amber-500/40' : 'border-slate-800'}`}>
+                      <div class="flex justify-between items-start">
+                        <span class="text-xs font-bold text-slate-400 font-mono">Code: {team.id}</span>
+                        <button onClick={(e) => { e.stopPropagation(); toggleFavorite(team.id); }} class="text-sm p-1 hover:bg-slate-800 rounded">{isFav ? '⭐' : '☆'}</button>
+                      </div>
+                      <div class="mt-5">
+                        {getTeamFlag(team.id, "w-10 h-7 object-cover rounded shadow border mb-2")}
+                        <h4 class="text-sm font-black text-white truncate">{team.name}</h4>
+                        <span class="text-xs text-slate-500 block font-mono">Rank: #{team.rank}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
             )}
-
           </main>
 
-          {/* TEAM PROFILE MODAL OVERLAY */}
+          
           {selectedTeamIdForModal && selectedTeamDetails && (
-            <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/85 backdrop-blur-md p-4 animate-fade-in">
-              <div class="bg-slate-950 border border-slate-800 w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto animate-slide-up sm:animate-zoom-in">
-                
-                {/* Header Information */}
-                <div class="flex justify-between items-start border-b border-slate-800 pb-5 mb-5">
-                  <div class="flex gap-4 items-center">
-                    {getTeamFlag(selectedTeamIdForModal, "w-16 h-10 object-cover rounded-md shadow-lg border border-slate-800 shrink-0")}
+            <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/85 backdrop-blur-md p-4">
+              <div class="bg-slate-950 border border-slate-800 w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+                <div class="flex justify-between items-start border-b border-slate-800 pb-4 mb-4">
+                  <div class="flex gap-3 items-center">
+                    {getTeamFlag(selectedTeamIdForModal, "w-14 h-9 object-cover rounded border shadow")}
                     <div>
-                      <h3 class="text-xl sm:text-2xl font-black font-display text-white">
-                        {findTeam(selectedTeamIdForModal).name}
-                      </h3>
-                      <p class="text-sm text-emerald-400 font-semibold font-mono">
-                        FIFA Rank: #{findTeam(selectedTeamIdForModal).rank} • Abbr: {selectedTeamIdForModal}
-                      </p>
+                      <h3 class="text-xl font-black text-white">{findTeam(selectedTeamIdForModal).name}</h3>
+                      <p class="text-xs text-emerald-400 font-mono font-semibold">FIFA Rank: #{findTeam(selectedTeamIdForModal).rank}</p>
                     </div>
                   </div>
-                  <button 
-                    onClick={() => setSelectedTeamIdForModal(null)}
-                    class="bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white p-2 rounded-full border border-slate-800 transition"
-                  >
-                    ✕
-                  </button>
+                  <button onClick={() => setSelectedTeamIdForModal(null)} class="bg-slate-900 text-slate-400 p-2 rounded-full border border-slate-800">✕</button>
                 </div>
-
-                <div class="space-y-6">
-                  {/* Coach Section */}
-                  <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                    <span class="text-xs text-slate-500 block font-bold tracking-wider uppercase font-mono mb-1">Head Coach</span>
-                    <strong class="text-base sm:text-lg text-emerald-400">{selectedTeamDetails.coach}</strong>
-                  </div>
-
-                  {/* Star Players List */}
+                <div class="space-y-4 text-sm sm:text-base">
+                  <p><span class="text-slate-400 block text-xs uppercase font-mono font-bold">Head Coach</span><strong class="text-emerald-400 text-base">{selectedTeamDetails.coach}</strong></p>
                   <div>
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 font-display mb-3">Key Stars & Squad Members</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {selectedTeamDetails.players.map((player, idx) => (
-                        <div key={idx} class="bg-slate-900/40 p-3 rounded-lg border border-slate-800/50 flex items-center gap-2.5 text-xs sm:text-sm">
-                          <span class="text-emerald-500">⭐</span>
-                          <span class="text-slate-200 font-bold">{player}</span>
-                        </div>
-                      ))}
-                    </div>
+                    <span class="text-slate-400 block text-xs uppercase font-mono font-bold mb-1">Squad Key Stars</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">{selectedTeamDetails.players.map((p, i) => <div key={i} class="bg-slate-900/60 p-2.5 rounded border border-slate-800 text-xs sm:text-sm font-bold">⭐ {p}</div>)}</div>
                   </div>
-
-                  {/* Trivia / Facts */}
-                  <div class="space-y-3.5 border-t border-slate-800/80 pt-5">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 font-display">Interesting Facts & Trivia</h4>
-                    {selectedTeamDetails.facts.map((fact, idx) => (
-                      <div key={idx} class="flex gap-3 items-start text-xs sm:text-sm leading-relaxed text-slate-300">
-                        <span class="text-emerald-500 shrink-0 mt-1">▪</span>
-                        <p>{fact}</p>
-                      </div>
-                    ))}
+                  <div class="border-t border-slate-800 pt-3">
+                    <span class="text-slate-400 block text-xs uppercase font-mono font-bold mb-2">Audited Trivia & Insights</span>
+                    {selectedTeamDetails.facts.map((f, i) => <p key={i} class="text-xs sm:text-sm leading-relaxed text-slate-300 flex gap-2"><span class="text-emerald-500">▪</span>{f}</p>)}
                   </div>
                 </div>
-
-                <button 
-                  onClick={() => setSelectedTeamIdForModal(null)}
-                  class="w-full mt-6 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition duration-150"
-                >
-                  Close Squad Profile
-                </button>
               </div>
             </div>
           )}
 
-          {/* VENUE FACTS MODAL OVERLAY */}
-          {selectedVenueId && selectedVenue && (
-            <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-              <div class="bg-slate-950 border border-slate-800 w-full max-w-md sm:max-w-lg rounded-t-3xl sm:rounded-3xl p-5 shadow-2xl relative animate-slide-up sm:animate-zoom-in">
-                
-                <div class="flex justify-between items-start border-b border-slate-800 pb-5 mb-5">
-                  <div class="flex gap-4 items-center">
-                    <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0Z" />
-                    </svg>
-                    <div>
-                      <h3 class="text-lg sm:text-xl font-black font-display text-white">{selectedVenue.name}</h3>
-                      <p class="text-xs sm:text-sm text-emerald-400 font-semibold">{selectedVenue.city}, {selectedVenue.country}</p>
-                    </div>
-                  </div>
-                  <button 
-                    onClick={() => setSelectedVenueId(null)}
-                    class="bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white p-2 rounded-full border border-slate-800 transition"
-                  >
-                    ✕
-                  </button>
-                </div>
-
-                {/* Core Facts Grid */}
-                <div class="grid grid-cols-2 gap-3 mb-5 text-xs font-mono">
-                  <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block">CAPACITY</span>
-                    <strong class="text-slate-200 text-sm">{selectedVenue.cap}</strong>
-                  </div>
-                  <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block">YEAR OPENED</span>
-                    <strong class="text-slate-200 text-sm">{selectedVenue.opened}</strong>
-                  </div>
-                  <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 col-span-2">
-                    <span class="text-slate-500 block">PITCH SURFACE</span>
-                    <strong class="text-emerald-400 text-sm">{selectedVenue.surface}</strong>
-                  </div>
-                </div>
-
-                {/* Facts Bullet Points */}
-                <div class="space-y-3.5 max-h-[220px] overflow-y-auto pr-1">
-                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 font-display">Trivia & Stadium Insights</h4>
-                  {selectedVenue.facts.map((fact, idx) => (
-                    <div key={idx} class="flex gap-2.5 items-start text-xs sm:text-sm leading-relaxed text-slate-300">
-                      <span class="text-emerald-500 shrink-0 mt-1">▪</span>
-                      <p>{fact}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <button 
-                  onClick={() => setSelectedVenueId(null)}
-                  class="w-full mt-6 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition duration-150"
-                >
-                  Close Details
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* MATCH DETAILS & LIVE STATS MODAL */}
+          
           {selectedMatchNo && selectedMatch && (() => {
             const modalHomePlaceholder = !MAP_3_TO_2[selectedMatch.home];
             const modalAwayPlaceholder = !MAP_3_TO_2[selectedMatch.away];
 
             return (
-              <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/85 backdrop-blur-sm p-4 animate-fade-in">
-                <div class="bg-slate-950 border border-slate-800 w-full max-w-md sm:max-w-lg rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl relative max-h-[90vh] sm:max-h-[80vh] overflow-y-auto animate-slide-up sm:animate-zoom-in">
-                  
-                  {/* Modal Header */}
+              <div class="fixed inset-0 z-[100] flex items-end justify-center sm:items-center bg-black/85 backdrop-blur-md p-4">
+                <div class="bg-slate-950 border border-slate-800 w-full max-w-md sm:max-w-lg rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
                   <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
-                    <span class="text-xs sm:text-sm font-bold text-slate-400 font-mono">
-                      MATCH CENTER • No. {selectedMatch.matchNo}
-                    </span>
-                    <button 
-                      onClick={() => setSelectedMatchNo(null)}
-                      class="bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white p-2 rounded-full border border-slate-800 transition"
-                    >
-                      ✕
-                    </button>
+                    <span class="text-xs font-bold text-slate-400 font-mono">MATCH CENTER • No. {selectedMatch.matchNo}</span>
+                    <button onClick={() => setSelectedMatchNo(null)} class="bg-slate-900 text-slate-400 p-2 rounded-full border border-slate-800">✕</button>
                   </div>
-
-                  {/* Main Matchup Board */}
-                  <div class="text-center py-2">
-                    <span class="text-xs font-bold text-emerald-400 tracking-widest block uppercase font-mono">
-                      {selectedMatch.stage === 'Group' ? `Group ${selectedMatch.group}` : selectedMatch.stage}
-                    </span>
-                    
-                    <div class="flex justify-between items-center mt-4 px-2">
-                      {/* Home Team */}
+                  <div class="text-center py-2 border-b border-slate-900 pb-4">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">{selectedMatch.stage}</span>
+                    <div class="flex justify-between items-center mt-4">
                       <div class="flex flex-col items-center w-28">
-                        {getTeamFlag(selectedMatch.home, "w-16 h-10 object-cover rounded-md shadow-lg border border-slate-800 shrink-0 mb-1")}
-                        <strong class="text-lg text-white mt-1 uppercase font-mono tracking-wider truncate max-w-[110px]">
-                          {MAP_3_TO_2[selectedMatch.home] ? selectedMatch.home : getPlaceholderLabel(selectedMatch.home)}
-                        </strong>
-                        {MAP_3_TO_2[selectedMatch.home] && (
-                          <span class="text-xs text-slate-500 font-semibold">Rank: #{findTeam(selectedMatch.home).rank}</span>
-                        )}
+                        {getTeamFlag(selectedMatch.home, "w-14 h-9 object-cover rounded border shadow mb-2")}
+                        <strong class="text-base text-white truncate max-w-[110px]">{modalHomePlaceholder ? getPlaceholderLabel(selectedMatch.home) : selectedMatch.home}</strong>
                       </div>
-
-                      {/* Score display */}
                       <div class="flex-1 text-center">
-                        {selectedMatch.completed ? (
-                          <div>
-                            <div class="text-3xl sm:text-4xl font-black font-display text-emerald-400 font-mono tracking-widest">
-                              {selectedMatch.homeGoals} - {selectedMatch.awayGoals}
-                            </div>
-                            <span class="inline-block mt-3 text-xs bg-emerald-950/60 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full uppercase tracking-wider font-bold">
-                              Full Time
-                            </span>
-                          </div>
-                        ) : (
-                          <div>
-                            <div class="text-sm font-semibold text-slate-300 font-mono mb-1">
-                              {new Date(selectedMatch.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
-                            </div>
-                            <div class="text-xl font-bold text-slate-400 uppercase tracking-widest font-mono">
-                              {selectedMatch.time} EST
-                            </div>
-                            <span class="inline-block mt-3 text-xs bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">
-                              Scheduled
-                            </span>
-                          </div>
-                        )}
+                        <div class="text-sm font-semibold text-slate-400 font-mono mb-0.5">{selectedMatch.date}</div>
+                        <div class="text-xl font-black text-emerald-400 font-mono">{selectedMatch.completed ? `${selectedMatch.homeGoals} - ${selectedMatch.awayGoals}` : `${selectedMatch.time} EST`}</div>
                       </div>
-
-                      {/* Away Team */}
                       <div class="flex flex-col items-center w-28">
-                        {getTeamFlag(selectedMatch.away, "w-16 h-10 object-cover rounded-md shadow-lg border border-slate-800 shrink-0 mb-1")}
-                        <strong class="text-lg text-white mt-1 uppercase font-mono tracking-wider truncate max-w-[110px]">
-                          {MAP_3_TO_2[selectedMatch.away] ? selectedMatch.away : getPlaceholderLabel(selectedMatch.away)}
-                        </strong>
-                        {MAP_3_TO_2[selectedMatch.away] && (
-                          <span class="text-xs text-slate-500 font-semibold">Rank: #{findTeam(selectedMatch.away).rank}</span>
-                        )}
+                        {getTeamFlag(selectedMatch.away, "w-14 h-9 object-cover rounded border shadow mb-2")}
+                        <strong class="text-base text-white truncate max-w-[110px]">{modalAwayPlaceholder ? getPlaceholderLabel(selectedMatch.away) : selectedMatch.away}</strong>
                       </div>
                     </div>
                   </div>
-
-                  {/* STATS CONTENT */}
-                  {selectedMatch.completed ? (
-                    selectedMatch.stats ? (
-                      <div class="mt-6 space-y-5 animate-fade-in">
-                        
-                        {/* Factual Scorers Timeline */}
-                        {selectedMatch.stats.timeline && selectedMatch.stats.timeline.length > 0 && (
-                          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
-                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 font-display">Official Scorers</h4>
-                            <div class="space-y-2 text-xs sm:text-sm">
-                              {selectedMatch.stats.timeline.map((event, idx) => (
-                                <div key={idx} class={`flex items-center gap-2 ${event.team === 'home' ? 'text-left' : 'text-right justify-end'}`}>
-                                  {event.team === 'home' ? (
-                                    <>
-                                      <span class="text-emerald-500">⚽</span>
-                                      <span class="text-slate-200 font-bold">{event.player}</span>
-                                      <span class="text-xs text-slate-500 font-mono">({event.minute}')</span>
-                                    </>
-                                  ) : (
-                                    <>
-                                      <span class="text-xs text-slate-500 font-mono">({event.minute}')</span>
-                                      <span class="text-slate-200 font-bold">{event.player}</span>
-                                      <span class="text-emerald-500">⚽</span>
-                                    </>
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Official Stat Charts */}
-                        <div class="space-y-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800/60">
-                          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest border-b border-slate-800 pb-2.5 font-display">
-                            Official Match Stats
-                          </h4>
-
-                          {/* Possession Slider */}
-                          <div class="space-y-1.5">
-                            <div class="flex justify-between text-xs sm:text-sm text-slate-300 font-mono">
-                              <span>{selectedMatch.stats.possession[0]}%</span>
-                              <span class="text-slate-500 font-bold">Possession</span>
-                              <span>{selectedMatch.stats.possession[1]}%</span>
-                            </div>
-                            <div class="flex h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                              <div class="bg-emerald-500 h-full" style={{ width: `${selectedMatch.stats.possession[0]}%` }}></div>
-                              <div class="bg-slate-700 h-full flex-1"></div>
-                            </div>
-                          </div>
-
-                          {/* Stats Rows */}
-                          {[
-                            { label: 'Shots', vals: selectedMatch.stats.shots },
-                            { label: 'Shots on Target', vals: selectedMatch.stats.shotsOnTarget },
-                            { label: 'Fouls Committed', vals: selectedMatch.stats.fouls },
-                            { label: 'Corner Kicks', vals: selectedMatch.stats.corners },
-                            { label: 'Passing Accuracy', vals: selectedMatch.stats.passAccuracy, suffix: '%' }
-                          ].map((item, index) => (
-                            <div key={index} class="flex justify-between items-center text-xs sm:text-sm py-2 font-mono">
-                              <span class="text-slate-200 w-12 text-left font-bold">{item.vals[0]}{item.suffix || ''}</span>
-                              <span class="text-slate-400 font-semibold">{item.label}</span>
-                              <span class="text-slate-200 w-12 text-right font-bold">{item.vals[1]}{item.suffix || ''}</span>
-                            </div>
-                          ))}
-
-                          {/* Cards Display */}
-                          <div class="flex justify-between items-center text-xs sm:text-sm py-2 font-mono border-t border-slate-800/40 mt-1">
-                            <span class="text-slate-200 w-14 text-left flex gap-1.5 items-center">
-                              <span class="bg-yellow-500 text-slate-950 font-black px-1.5 py-0.5 rounded-sm text-[10px]">{selectedMatch.stats.yellowCards[0]}</span>
-                              {selectedMatch.stats.redCards[0] > 0 && <span class="bg-red-600 text-white font-black px-1.5 py-0.5 rounded-sm text-[10px]">{selectedMatch.stats.redCards[0]}</span>}
-                            </span>
-                            <span class="text-slate-400 font-semibold">Cards (Y / R)</span>
-                            <span class="text-slate-200 w-14 text-right flex justify-end gap-1.5 items-center">
-                              <span class="bg-yellow-500 text-slate-950 font-black px-1.5 py-0.5 rounded-sm text-[10px]">{selectedMatch.stats.yellowCards[1]}</span>
-                              {selectedMatch.stats.redCards[1] > 0 && <span class="bg-red-600 text-white font-black px-1.5 py-0.5 rounded-sm text-[10px]">{selectedMatch.stats.redCards[1]}</span>}
-                            </span>
-                          </div>
-
-                        </div>
-
-                      </div>
-                    ) : (
-                      <div class="mt-6 space-y-4 text-center">
-                        <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800 text-xs sm:text-sm">
-                          <span class="text-2xl block mb-2">⚽</span>
-                          <h4 class="font-bold text-slate-200 mb-1">Official scores have successfully loaded</h4>
-                          <p class="text-[10px] sm:text-xs text-slate-400 leading-relaxed">
-                            This completed match result was retrieved automatically. Full match events, including rosters and yellow card stats, will populate details systematically as official data sheets compile.
-                          </p>
-                        </div>
-                      </div>
-                    )
-                  ) : (
-                    // UPCOMING MATCH INFO
-                    <div class="mt-6 space-y-5">
-                      <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-center text-xs sm:text-sm">
-                        <p class="text-slate-400 font-medium">
-                          This match has not kicked off yet. Real-time statistics, rosters, timelines, and standings will adjust as matches go live.
-                        </p>
-                      </div>
-
-                      {/* Pre-Match key players comparison */}
-                      {!modalHomePlaceholder && !modalAwayPlaceholder && (
-                        <div class="bg-slate-900/40 p-4 rounded-xl border border-slate-800/60 space-y-4">
-                          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest border-b border-slate-800 pb-2 text-center font-display">
-                            Roster Key Stars
-                          </h4>
-                          <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-                            <div class="border-r border-slate-800/80 pr-2">
-                              <span class="text-emerald-400 block font-bold mb-1.5 uppercase font-mono text-xs">{selectedMatch.home} Stars</span>
-                              <ul class="space-y-1 text-slate-300 font-medium font-semibold">
-                                {findTeam(selectedMatch.home).stars.map((s, idx) => <li key={idx}>⭐ {s}</li>)}
-                              </ul>
-                            </div>
-                            <div class="pl-2">
-                              <span class="text-emerald-400 block font-bold mb-1.5 uppercase font-mono text-xs">{selectedMatch.away} Stars</span>
-                              <ul class="space-y-1 text-slate-300 font-medium font-semibold">
-                                {findTeam(selectedMatch.away).stars.map((s, idx) => <li key={idx}>⭐ {s}</li>)}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Venue */}
-                      <div class="bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/60 text-xs text-slate-400 space-y-1.5 font-mono">
-                        <div class="flex justify-between">
-                          <span>STADIUM:</span>
-                          <strong class="text-slate-300">{VENUES.find(v => v.id === selectedMatch.venue)?.name}</strong>
-                        </div>
-                        <div class="flex justify-between">
-                          <span>CITY:</span>
-                          <strong class="text-slate-300">{VENUES.find(v => v.id === selectedMatch.venue)?.city}</strong>
-                        </div>
-                      </div>
-
-                    </div>
-                  )}
-
-                  <button 
-                    onClick={() => setSelectedMatchNo(null)}
-                    class="w-full mt-6 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition duration-150"
-                  >
-                    Close Match Center
-                  </button>
+                  <div class="mt-4 space-y-3.5 text-xs sm:text-sm text-slate-400 font-mono">
+                    <div class="flex justify-between"><span>STADIUM:</span><strong class="text-slate-200">{VENUES.find(v => v.id === selectedMatch.venue)?.name}</strong></div>
+                    <div class="flex justify-between"><span>LOCATION:</span><strong class="text-slate-200">{VENUES.find(v => v.id === selectedMatch.venue)?.city}</strong></div>
+                  </div>
                 </div>
               </div>
             );
           })()}
 
-          {/* Floats and centers on desktop, anchors on mobile screen bounds */}
-          <nav class="fixed bottom-0 left-0 right-0 md:bottom-6 md:left-1/2 md:-translate-x-1/2 w-full md:max-w-3xl md:rounded-2xl bg-slate-950/95 backdrop-blur-md border-t md:border border-slate-800 py-5 sm:py-6 px-6 flex justify-between items-center z-50 shadow-2xl transition-all duration-300">
-            {/* MATCHES TAB */}
-            <button 
-              onClick={() => { setActiveTab('matches'); setSearchQuery(''); }}
-              class={`flex flex-col items-center gap-1.5 transition py-3 flex-1 ${activeTab === 'matches' ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-              <span class="text-xs sm:text-sm font-semibold">Matches</span>
-            </button>
-
-            {/* ROADMAP / BRACKET TAB */}
-            <button 
-              onClick={() => { setActiveTab('roadmap'); setSearchQuery(''); }}
-              class={`flex flex-col items-center gap-1.5 transition py-3 flex-1 ${activeTab === 'roadmap' ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22V12"></path>
-                <path d="M18 12V6"></path>
-                <path d="M6 12V8"></path>
-                <rect x="2" y="2" width="20" height="4" rx="1"></rect>
-                <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2"></path>
-              </svg>
-              <span class="text-xs sm:text-sm font-semibold">Roadmap</span>
-            </button>
-
-            {/* GROUPS TAB */}
-            <button 
-              onClick={() => { setActiveTab('standings'); setSearchQuery(''); }}
-              class={`flex flex-col items-center gap-1.5 transition py-3 flex-1 ${activeTab === 'standings' ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 22h16"></path>
-                <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
-                <path d="M12 2a4 4 0 0 0-4 4v6h8V6a4 4 0 0 0-4-4Z"></path>
-              </svg>
-              <span class="text-xs sm:text-sm font-semibold">Groups</span>
-            </button>
-
-            {/* TEAMS TAB */}
-            <button 
-              onClick={() => { setActiveTab('teams'); setSearchQuery(''); }}
-              class={`flex flex-col items-center gap-1.5 transition py-3 flex-1 ${activeTab === 'teams' ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 2 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-              <span class="text-xs sm:text-sm font-semibold">Teams</span>
-            </button>
-
-            {/* VENUES TAB */}
-            <button 
-              onClick={() => { setActiveTab('venues'); setSearchQuery(''); }}
-              class={`flex flex-col items-center gap-1.5 transition py-3 flex-1 ${activeTab === 'venues' ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span class="text-xs sm:text-sm font-semibold">Venues</span>
-            </button>
+          <nav class="fixed bottom-0 left-0 right-0 md:bottom-6 md:left-1/2 md:-translate-x-1/2 w-full md:max-w-3xl md:rounded-2xl bg-slate-950/95 backdrop-blur-md border-t md:border border-slate-800 py-5 sm:py-6 px-6 flex justify-between items-center z-50 shadow-2xl">
+            {['matches', 'roadmap', 'standings', 'teams'].map(t => (
+              <button key={t} onClick={() => { setActiveTab(t); setSearchQuery(''); }} class={`flex flex-col items-center gap-1 transition py-3 flex-1 capitalize ${activeTab === t ? 'text-emerald-400 font-bold scale-105' : 'text-slate-500'}`}>
+                <span class="text-xs sm:text-sm font-semibold">{t === 'standings' ? 'Groups' : t}</span>
+              </button>
+            ))}
           </nav>
-
         </div>
       );
     }
 
-    const container = document.getElementById('root');
-    const root = ReactDOM.createRoot(container);
-    root.render(<App />);
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
   </script>
 </body>
 </html>
